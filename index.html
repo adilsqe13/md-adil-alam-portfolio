@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MD Adil Alam — Full Stack Developer</title>
+<title>Md Adil Alam — Full Stack Developer</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
@@ -17,6 +18,11 @@
     --accent: #16a34a;
     --accent2: #15803d;
     --accent3: #22c55e;
+    --themered1: #E74C3C;
+    --themered2: #C0392B;
+    --themered3: #fcf4dc;
+    --themedark1: #2C5D63;
+    --themedark2: #3A6F75;
     --accent-soft: #dcfce7;
     --accent-light: rgba(22,163,74,0.06);
     --accent-light2: rgba(22,163,74,0.12);
@@ -29,6 +35,7 @@
     --text: #0f2318;
     --text2: #1a3a28;
     --text3: #2d5a42;
+    --text-soft: #e4e4e4;
     --muted: #5c8a72;
     --muted2: #7fa894;
     --green-glow: rgba(22,163,74,0.18);
@@ -62,11 +69,11 @@
   .logo .bracket{color:var(--accent);font-weight:300;}
   .logo .name{color:var(--text);}
   .nav-links{display:flex;gap:2rem;list-style:none;}
-  .nav-links a{color:var(--muted);text-decoration:none;font-size:.88rem;font-weight:600;transition:color var(--transition-fast);letter-spacing:.1px;position:relative;padding:.25rem 0;}
-  .nav-links a::after{content:'';position:absolute;bottom:0;left:50%;width:0;height:2.5px;background:linear-gradient(90deg,var(--accent),var(--accent3));border-radius:2px;transition:all var(--transition-fast);transform:translateX(-50%);}
+  .nav-links a{color:var(--text);text-decoration:none;font-size:.88rem;font-weight:600;transition:color var(--transition-fast);letter-spacing:.1px;position:relative;padding:.25rem 0;}
+  .nav-links a::after{content:'';position:absolute;bottom:0;left:50%;width:0;height:2.5px;background:linear-gradient(90deg,var(--text),var(--text));border-radius:2px;transition:all var(--transition-fast);transform:translateX(-50%);}
   .nav-links a:hover{color:var(--text);}
   .nav-links a:hover::after{width:100%;}
-  .nav-cta{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;padding:.55rem 1.3rem;border-radius:10px;font-size:.85rem;font-weight:700;text-decoration:none;transition:all var(--transition);box-shadow:0 3px 12px var(--green-glow);letter-spacing:.2px;}
+  .nav-cta{background:linear-gradient(135deg,var(--themered2),var(--themered1));color:#fff;padding:.55rem 1.3rem;border-radius:10px;font-size:.85rem;font-weight:700;text-decoration:none;transition:all var(--transition);box-shadow:0 3px 12px var(--green-glow);letter-spacing:.2px;}
   .nav-cta:hover{transform:translateY(-2px);box-shadow:var(--shadow-green);}
   .hamburger{display:none;background:none;border:none;cursor:pointer;padding:4px;}
   .hamburger span{display:block;width:24px;height:2.5px;background:var(--text);margin:5px 0;transition:var(--transition);border-radius:2px;}
@@ -79,7 +86,7 @@
   /* SECTIONS */
   section{padding:110px 0 90px;}
   .container{max-width:1180px;margin:auto;padding:0 2rem;}
-  .section-label{display:inline-flex;align-items:center;gap:.5rem;font-size:.75rem;font-weight:700;letter-spacing:2.5px;color:var(--accent);text-transform:uppercase;margin-bottom:.75rem;background:var(--accent-soft);padding:.4rem 1rem;border-radius:24px;box-shadow:var(--shadow-xs);}
+  .section-label{display:inline-flex;align-items:center;gap:.5rem;font-size:.75rem;font-weight:700;letter-spacing:2.5px;color:var(--text);text-transform:uppercase;margin-bottom:.75rem;background:var(--text-soft);padding:.4rem 1rem;border-radius:24px;box-shadow:var(--shadow-xs);}
   .section-title{font-size:2.5rem;font-weight:900;margin-bottom:3.5rem;line-height:1.15;color:var(--text);letter-spacing:-1px;}
   .section-title span{background:linear-gradient(135deg,var(--accent) 0%,var(--accent3) 50%,var(--teal) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
   .section-subtitle{font-size:1.05rem;color:var(--muted);max-width:560px;line-height:1.8;margin-top:-2rem;margin-bottom:3rem;font-weight:400;}
@@ -96,10 +103,10 @@
   @keyframes pulse-dot{0%,100%{box-shadow:0 0 8px rgba(34,197,94,.5),0 0 0 0 rgba(34,197,94,.3);}50%{box-shadow:0 0 8px rgba(34,197,94,.5),0 0 0 6px rgba(34,197,94,0);}}
   h1.hero-name{font-size:clamp(2.6rem,5vw,4.2rem);font-weight:900;line-height:1.05;margin-bottom:.6rem;letter-spacing:-2px;color:var(--text);}
   h1.hero-name .green{background:linear-gradient(135deg,var(--accent),var(--accent3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
-  .hero-role{font-size:1.2rem;color:var(--accent2);font-weight:700;margin-bottom:1.2rem;min-height:1.8rem;letter-spacing:-.2px;}
+  .hero-role{font-size:1.2rem;color:var(--text);font-weight:700;margin-bottom:1.2rem;min-height:1.8rem;letter-spacing:-.2px;}
   .hero-desc{color:var(--muted);font-size:1.02rem;max-width:500px;margin-bottom:2.2rem;line-height:1.9;font-weight:400;}
   .hero-btns{display:flex;gap:1rem;flex-wrap:wrap;}
-  .btn-primary{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;padding:.8rem 1.8rem;border-radius:var(--radius-sm);font-weight:700;text-decoration:none;font-size:.92rem;transition:all var(--transition);display:inline-flex;align-items:center;gap:.55rem;box-shadow:var(--shadow-green);letter-spacing:.2px;}
+  .btn-primary{background:linear-gradient(135deg,var(--themered2),var(--themered1));color:#fff;padding:.8rem 1.8rem;border-radius:var(--radius-sm);font-weight:700;text-decoration:none;font-size:.92rem;transition:all var(--transition);display:inline-flex;align-items:center;gap:.55rem;box-shadow:var(--shadow-green);letter-spacing:.2px;}
   .btn-primary:hover{transform:translateY(-3px);box-shadow:var(--shadow-green-lg);}
   .btn-outline{background:var(--card);color:var(--text2);padding:.8rem 1.8rem;border-radius:var(--radius-sm);font-weight:700;text-decoration:none;font-size:.92rem;border:2px solid var(--border);transition:all var(--transition);display:inline-flex;align-items:center;gap:.55rem;box-shadow:var(--shadow-xs);letter-spacing:.2px;}
   .btn-outline:hover{border-color:var(--accent);color:var(--accent2);transform:translateY(-3px);box-shadow:var(--shadow-md);}
@@ -172,19 +179,19 @@
   .timeline{position:relative;padding-left:2.5rem;}
   .timeline::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(to bottom,var(--accent),var(--accent3),var(--bg3));border-radius:2px;}
   .tl-item{position:relative;margin-bottom:2.5rem;padding-left:1.75rem;}
-  .tl-dot{position:absolute;left:-2.65rem;top:8px;width:18px;height:18px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent3));border:3px solid var(--bg2);box-shadow:0 0 0 5px rgba(22,163,74,.12),var(--shadow-sm);}
+  .tl-dot{position:absolute;left:-2.97rem;top:8px;width:18px;height:18px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent3));border:3px solid var(--bg2);box-shadow:0 0 0 5px rgba(22,163,74,.12),var(--shadow-sm);}
   .tl-card{background:var(--card);border:1.5px solid var(--border);border-radius:var(--radius);padding:1.6rem 1.9rem;transition:all var(--transition);box-shadow:var(--shadow-sm);}
   .tl-card:hover{border-color:var(--border-hover);box-shadow:var(--shadow-lg);transform:translateX(4px);}
   .tl-header{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:.8rem;flex-wrap:wrap;gap:.5rem;}
-  .tl-title{font-size:1.08rem;font-weight:800;color:var(--text);letter-spacing:-.3px;}
+  .tl-title{font-size:1.3rem;font-weight:800;color:var(--text);letter-spacing:-.3px;}
   .tl-company{display:flex;align-items:center;gap:.5rem;margin-top:.35rem;}
-  .tl-company-name{font-size:.86rem;color:var(--accent2);font-weight:600;}
+  .tl-company-name{font-size:1.1rem;color:#2e2e2e;font-weight:600;}
   .tl-badge{font-size:.72rem;padding:.28rem .8rem;border-radius:20px;font-weight:700;white-space:nowrap;letter-spacing:.3px;}
   .badge-full{background:var(--accent-soft);color:var(--accent2);border:1px solid rgba(22,163,74,.2);}
   .badge-intern{background:var(--blue-soft);color:var(--blue);border:1px solid rgba(37,99,235,.15);}
   .badge-free{background:var(--amber-soft);color:var(--amber);border:1px solid rgba(217,119,6,.15);}
   .tl-date{font-size:.8rem;color:var(--muted2);margin-top:.35rem;font-weight:600;}
-  .tl-duration{font-size:.75rem;color:var(--accent2);font-weight:700;background:var(--accent-soft);padding:.25rem .7rem;border-radius:8px;letter-spacing:.2px;}
+  .tl-duration{font-size:.75rem;color:var(--themered2);font-weight:700;background:var(--themered3);padding:.25rem .7rem;border-radius:8px;letter-spacing:.2px;}
   .tl-body ul{padding-left:1.1rem;margin-top:.7rem;}
   .tl-body li{font-size:.88rem;color:var(--muted);margin-bottom:.5rem;line-height:1.7;font-weight:400;}
   .tl-body li::marker{color:var(--accent3);}
@@ -197,7 +204,7 @@
   .project-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--accent),var(--accent3),var(--teal));opacity:0;transition:opacity var(--transition);}
   .project-card:hover::before{opacity:1;}
   .project-card:hover{border-color:var(--border-hover);transform:translateY(-6px);box-shadow:var(--shadow-xl);}
-  .project-label{font-size:.72rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-bottom:.8rem;}
+  .project-label{font-size:.72rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--text3);margin-bottom:.8rem;}
   .project-card h3{font-size:1.2rem;font-weight:800;margin-bottom:.8rem;color:var(--text);letter-spacing:-.3px;}
   .project-card > p{font-size:.88rem;color:var(--muted);line-height:1.8;flex:1;font-weight:400;}
   .project-tech{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1.1rem;}
@@ -205,6 +212,10 @@
   .project-links{display:flex;gap:1rem;margin-top:1.4rem;padding-top:1rem;border-top:1px solid var(--border);}
   .project-link{display:flex;align-items:center;gap:.4rem;font-size:.84rem;color:var(--accent2);text-decoration:none;font-weight:700;transition:all var(--transition-fast);letter-spacing:.1px;}
   .project-link:hover{color:var(--accent);transform:translateX(3px);}
+  .project-link-livedemo{display:flex;align-items:center;gap:.4rem;font-size:.84rem;color:var(--themered2);text-decoration:none;font-weight:700;transition:all var(--transition-fast);letter-spacing:.1px;}
+  .project-link-livedemo:hover{color:var(--themered1);transform:translateX(3px);}
+  .project-link-viewproject{display:flex;align-items:center;gap:.4rem;font-size:.84rem;color:var(--text);text-decoration:none;font-weight:700;transition:all var(--transition-fast);letter-spacing:.1px;}
+  .project-link-viewproject:hover{color:var(--text);transform:translateX(3px);}
 
   /* EDUCATION */
   #education{background:var(--bg2);position:relative;}
@@ -237,16 +248,16 @@
   .contact-cta::after{content:'';position:absolute;bottom:-60px;left:-60px;width:200px;height:200px;background:radial-gradient(circle,rgba(13,148,136,.05),transparent);pointer-events:none;}
   .contact-cta h3{font-size:1.4rem;font-weight:900;margin-bottom:.8rem;color:var(--text);letter-spacing:-.5px;position:relative;}
   .contact-cta > p{color:var(--muted);font-size:.92rem;margin-bottom:1.8rem;line-height:1.85;position:relative;font-weight:400;}
-  .contact-cta .download-btn{display:inline-flex;align-items:center;gap:.65rem;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;padding:.9rem 1.9rem;border-radius:var(--radius-sm);text-decoration:none;font-weight:800;font-size:.92rem;transition:all var(--transition);box-shadow:var(--shadow-green);position:relative;letter-spacing:.2px;}
+  .contact-cta .download-btn{display:inline-flex;align-items:center;gap:.65rem;background:linear-gradient(135deg,var(--themered2),var(--themered1));color:#fff;padding:.9rem 1.9rem;border-radius:var(--radius-sm);text-decoration:none;font-weight:800;font-size:.92rem;transition:all var(--transition);box-shadow:var(--shadow-green);position:relative;letter-spacing:.2px;}
   .contact-cta .download-btn:hover{transform:translateY(-3px);box-shadow:var(--shadow-green-lg);}
 
   /* FOOTER */
   footer{background:var(--bg2);border-top:1px solid var(--border);padding:2.5rem;text-align:center;}
   footer p{color:var(--muted2);font-size:.85rem;font-weight:500;letter-spacing:.2px;}
-  footer span{color:var(--accent2);font-weight:800;}
+  footer span{color:var(--text);font-weight:800;}
 
   /* SCROLL TO TOP */
-  #scroll-top{position:fixed;bottom:2rem;right:2rem;width:48px;height:48px;border-radius:var(--radius-sm);background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border:none;cursor:pointer;font-size:.95rem;display:none;align-items:center;justify-content:center;z-index:999;transition:all var(--transition);box-shadow:var(--shadow-green);}
+  #scroll-top{position:fixed;bottom:2rem;right:2rem;width:48px;height:48px;border-radius:var(--radius-sm);background:linear-gradient(135deg,var(--themered2),var(--themered1));color:#fff;border:none;cursor:pointer;font-size:.95rem;display:none;align-items:center;justify-content:center;z-index:999;transition:all var(--transition);box-shadow:var(--shadow-green);}
   #scroll-top:hover{transform:translateY(-4px);box-shadow:var(--shadow-green-lg);}
   #scroll-top.show{display:flex;}
 
@@ -257,7 +268,7 @@
   .fade-up:nth-child(3){transition-delay:.2s;}
 
   /* TYPING CURSOR */
-  .cursor{display:inline-block;width:3px;height:1.15em;background:linear-gradient(to bottom,var(--accent),var(--accent3));margin-left:3px;vertical-align:middle;animation:blink .7s step-end infinite;border-radius:2px;}
+  .cursor{display:inline-block;width:3px;height:1.15em;background:linear-gradient(to bottom,var(--text),var(--text));margin-left:3px;vertical-align:middle;animation:blink .7s step-end infinite;border-radius:2px;}
   @keyframes blink{50%{opacity:0;}}
 
   /* RESPONSIVE */
@@ -282,6 +293,102 @@
     .hero-btns{flex-direction:column;}
     .section-title{font-size:1.6rem;}
   }
+
+  /*---------------------------------------------CSS by Adil----------------------------------------*/
+
+  .hero-avatar {
+    width: 317px;
+    height: 317px;
+    overflow: hidden;
+  }
+  
+  .hero-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .skill-icon {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+  }
+
+  .skill-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .slider-wrap {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background: #f0f0f0;
+    border-radius: 8px 8px 0 0;
+  }
+  .slides {
+    display: flex;
+    height: 100%;
+    transition: transform 0.5s ease;
+  }
+  .slide {
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .slide-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: #999;
+    font-size: 13px;
+  }
+  .slide-placeholder svg { opacity: 0.4; }
+  .slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.45);
+    border: none;
+    color: #fff;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 14px;
+    z-index: 2;
+  }
+  .slider-btn.prev { left: 10px; }
+  .slider-btn.next { right: 10px; }
+  .slider-dots {
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 5px;
+  }
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.5);
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+  .dot.active { background: #fff; }
 </style>
 </head>
 <body>
@@ -289,7 +396,7 @@
 <!-- NAV -->
 <nav id="navbar">
   <div class="nav-inner">
-    <div class="logo"><span class="bracket">&lt;</span><span class="name">Adil</span><span class="bracket"> /&gt;</span></div>
+    <div class="logo"><span class="name"> <img src="./images/logo-icon.png" style="height: 79px; width:125px"> </span></div>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
@@ -298,7 +405,7 @@
       <li><a href="#education">Education</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-    <a href="cv.pdf" download class="nav-cta"><i class="fas fa-download"></i> Resume</a>
+    <a href="md_adil_alam_resume.pdf" download class="nav-cta"><i class="fas fa-download"></i> Resume</a>
     <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
@@ -322,30 +429,28 @@
     <div class="hero-grid">
       <div>
         <div class="hero-badge"><span class="dot"></span> Available for opportunities</div>
-        <h1 class="hero-name">MD Adil<br><span class="green">Alam</span></h1>
+        <h1 class="hero-name">Md Adil<br><span class="green">Alam</span></h1>
         <div class="hero-role" id="typing-text"></div>
-        <p class="hero-desc">Full Stack Engineer with 6+ years of experience building scalable web applications across freelance and product environments using Node.js, React.js, Python/Django, and GCP.</p>
+        <p class="hero-desc">Full Stack Engineer with <strong>6+</strong> years of experience across freelance and product environments, building scalable web applications using Node.js, Express.js, React.js with additional experience in Python/Django, MySQL, and GCP . Experienced in developing REST APIs, database-driven systems, large-dataset search features, backend optimization, and cloud-based application deployment.</p>
         <div class="hero-btns">
           <a href="#projects" class="btn-primary"><i class="fas fa-code"></i> View Projects</a>
           <a href="#contact" class="btn-outline"><i class="fas fa-envelope"></i> Get in Touch</a>
         </div>
         <div class="hero-social">
-          <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://github.com" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-          <a href="https://leetcode.com" target="_blank" aria-label="LeetCode"><i class="fas fa-code"></i></a>
+          <a href="https://www.linkedin.com/in/md-adil-alam-6a3a69161/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/adilsqe13" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://leetcode.com/u/Adilsqe13/" target="_blank" aria-label="LeetCode"><i class="fas fa-code"></i></a>
           <a href="mailto:adilsqe13@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
         </div>
       </div>
       <div class="hero-img-wrap">
         <div class="hero-visual">
-          <div class="hero-avatar"><span>&#x1F468;&#x200D;&#x1F4BB;</span></div>
-          <div class="hero-float-badge top-right"><i class="fas fa-bolt"></i> Node.js</div>
-          <div class="hero-float-badge bottom-left"><i class="fas fa-database"></i> MySQL</div>
-          <div class="hero-float-badge bottom-right"><i class="fab fa-react"></i> React</div>
+          <div class="hero-avatar"><img src="./images/adil_profile_img.jpeg"/></div>
+          
           <div class="hero-stats">
             <div class="hero-stat"><div class="num">6<span>+</span></div><div class="lbl">Years Exp</div></div>
-            <div class="hero-stat"><div class="num">10<span>+</span></div><div class="lbl">Projects</div></div>
-            <div class="hero-stat"><div class="num">3<span>+</span></div><div class="lbl">Tech Stacks</div></div>
+            <div class="hero-stat"><div class="num">3<span>+</span></div><div class="lbl">Projects</div></div>
+            <div class="hero-stat"><div class="num">7<span>+</span></div><div class="lbl">Tech Stacks</div></div>
           </div>
         </div>
       </div>
@@ -402,60 +507,53 @@
     </div>
     <div class="skills-grid">
       <div class="skill-card fade-up">
-        <div class="skill-icon">&#x1F7E2;</div>
-        <h4>Node.js / Express.js</h4>
-        <p>REST APIs, middleware, auth flows, backend architecture</p>
+        <div class="skill-icon"><img src="./images/nodejs-icon.png"></div>
+        <h4>Node.js</h4>
+        <p>Developed high-performance backend systems using Node.js with optimized APIs.</p>
         <div class="skill-bar"><div class="skill-bar-fill" data-width="90" style="width:0"></div></div>
-        <div class="skill-tags"><span class="skill-tag">Express.js</span><span class="skill-tag">REST APIs</span><span class="skill-tag">JWT</span></div>
+        <div class="skill-tags"><span class="skill-tag">Express.js</span><span class="skill-tag">RESTful APIs</span><span class="skill-tag">Middleware</span><span class="skill-tag">OOPS</span><span class="skill-tag">JWT</span></div>
       </div>
       <div class="skill-card fade-up">
-        <div class="skill-icon">&#x269B;&#xFE0F;</div>
+        <div class="skill-icon"><img src="./images/reactjs-icon.png"></div>
         <h4>React.js</h4>
-        <p>Component architecture, hooks, state management, SPA development</p>
+        <p>Experienced in React with hooks, state management, and component-based architecture.</p>
         <div class="skill-bar"><div class="skill-bar-fill" data-width="80" style="width:0"></div></div>
         <div class="skill-tags"><span class="skill-tag">React Hooks</span><span class="skill-tag">Context</span><span class="skill-tag">SPA</span></div>
       </div>
       <div class="skill-card fade-up">
-        <div class="skill-icon">&#x1F40D;</div>
-        <h4>Python / Django</h4>
-        <p>Backend APIs, ORM-driven data workflows, Django REST Framework</p>
+        <div class="skill-icon"><img src="./images/python-icon.png"></div>
+        <h4>Python</h4>
+        <p>Proficient in Python for backend development and scripting.</p>
         <div class="skill-bar"><div class="skill-bar-fill" data-width="75" style="width:0"></div></div>
         <div class="skill-tags"><span class="skill-tag">Django</span><span class="skill-tag">DRF</span><span class="skill-tag">ORM</span></div>
       </div>
       <div class="skill-card fade-up">
-        <div class="skill-icon">&#x1F5C4;&#xFE0F;</div>
+        <div class="skill-icon"><img src="./images/mysql-icon.png"></div>
         <h4>MySQL</h4>
-        <p>Schema design, query optimization, indexing for large-scale datasets</p>
+        <p>Strong experience with MySQL for database design and query optimization.</p>
         <div class="skill-bar"><div class="skill-bar-fill" data-width="85" style="width:0"></div></div>
         <div class="skill-tags"><span class="skill-tag">Schema Design</span><span class="skill-tag">Indexing</span><span class="skill-tag">Optimization</span></div>
       </div>
       <div class="skill-card fade-up">
-        <div class="skill-icon">&#x1F418;</div>
-        <h4>PHP / Laravel</h4>
-        <p>CodeIgniter, Laravel, backend MVC apps and API development</p>
-        <div class="skill-bar"><div class="skill-bar-fill" data-width="70" style="width:0"></div></div>
-        <div class="skill-tags"><span class="skill-tag">CodeIgniter</span><span class="skill-tag">Laravel</span><span class="skill-tag">MVC</span></div>
-      </div>
-      <div class="skill-card fade-up">
-        <div class="skill-icon">&#x2601;&#xFE0F;</div>
+        <div class="skill-icon"><img src="./images/gcp-icon.png"></div>
         <h4>Cloud & DevOps</h4>
-        <p>GCP deployments, AWS, Docker, Git version control</p>
+        <p>Deployed and managed applications on Google Cloud Platform using cloud-native services.</p>
         <div class="skill-bar"><div class="skill-bar-fill" data-width="65" style="width:0"></div></div>
         <div class="skill-tags"><span class="skill-tag">GCP</span><span class="skill-tag">AWS</span><span class="skill-tag">Docker</span><span class="skill-tag">Git</span></div>
       </div>
       <div class="skill-card fade-up">
-        <div class="skill-icon">&#x1F343;</div>
-        <h4>MongoDB</h4>
-        <p>Schema design, aggregation pipelines, high-read feed optimization</p>
-        <div class="skill-bar"><div class="skill-bar-fill" data-width="72" style="width:0"></div></div>
-        <div class="skill-tags"><span class="skill-tag">Aggregation</span><span class="skill-tag">Schemas</span><span class="skill-tag">Atlas</span></div>
+        <div class="skill-icon"><img src="./images/system-design-icon.png"></div>
+        <h4>System Design</h4>
+        <p>Skilled in scalable backend, APIs & cloud design (HLD/LLD).</p>
+        <div class="skill-bar"><div class="skill-bar-fill" data-width="70" style="width:0"></div></div>
+        <div class="skill-tags"><span class="skill-tag">HLD</span><span class="skill-tag">LLD</span><span class="skill-tag">LLMs</span></div>
       </div>
       <div class="skill-card fade-up">
-        <div class="skill-icon">&#x1F9E0;</div>
-        <h4>System Design & DSA</h4>
-        <p>HLD & LLD principles, data structures, algorithms, LLM fundamentals</p>
+        <div class="skill-icon"><img src="./images/dsa-icon.png"></div>
+        <h4>DSA</h4>
+        <p>Strong foundation in DSA with efficient problem-solving skills.</p>
         <div class="skill-bar"><div class="skill-bar-fill" data-width="70" style="width:0"></div></div>
-        <div class="skill-tags"><span class="skill-tag">HLD</span><span class="skill-tag">LLD</span><span class="skill-tag">DSA</span><span class="skill-tag">LLMs</span></div>
+        <div class="skill-tags"><span class="skill-tag">Data structures</span><span class="skill-tag">Algorithms</span><span class="skill-tag">Arrays</span><span class="skill-tag">Trees</span><span class="skill-tag">Sorting & Searching</span></div>
       </div>
     </div>
   </div>
@@ -474,14 +572,14 @@
         <div class="tl-dot"></div>
         <div class="tl-card">
           <div class="tl-header">
-            <div>
-              <div class="tl-title">Software Engineer I</div>
-              <div class="tl-company"><i class="fas fa-building" style="font-size:.75rem;color:var(--muted2)"></i><span class="tl-company-name">Bitpastel Solution Pvt. Ltd.</span></div>
-              <div class="tl-date"><i class="fas fa-calendar-alt" style="font-size:.7rem"></i> Nov 2024 - Present</div>
+          <div>
+            <div class="tl-title">Software Engineer I</div>
+            <div class="tl-company"><img src="./images/bitpastel-icon.jpg" style="height:50px; width:50px"/><span class="tl-company-name">Bitpastel Solution Private Limited</span></div>
+              <div class="tl-date"><i class="fas fa-calendar-alt" style="font-size:.7rem"></i>&nbsp; Nov 2024 - Present</div>
             </div>
             <div style="display:flex;flex-direction:column;align-items:flex-end;gap:.4rem">
               <span class="tl-badge badge-full">Full-time</span>
-              <span class="tl-duration">1.4+ Years</span>
+              <span class="tl-duration">1.5 Year</span>
             </div>
           </div>
           <div class="tl-body">
@@ -503,11 +601,11 @@
           <div class="tl-header">
             <div>
               <div class="tl-title">Software Engineer - Intern</div>
-              <div class="tl-company"><i class="fas fa-building" style="font-size:.75rem;color:var(--muted2)"></i><span class="tl-company-name">Bitpastel Solution Pvt. Ltd.</span></div>
-              <div class="tl-date"><i class="fas fa-calendar-alt" style="font-size:.7rem"></i> May 2024 - Nov 2024</div>
+              <div class="tl-company"><img src="./images/bitpastel-icon.jpg" style="height:50px; width:50px"/><span class="tl-company-name">Bitpastel Solution Private Limited</span></div>
+              <div class="tl-date"><i class="fas fa-calendar-alt" style="font-size:.7rem"></i>&nbsp; May 2024 - Nov 2024</div>
             </div>
             <div style="display:flex;flex-direction:column;align-items:flex-end;gap:.4rem">
-              <span class="tl-badge badge-intern">Internship</span>
+              <span class="tl-badge badge-full">Internship</span>
               <span class="tl-duration">6 Months</span>
             </div>
           </div>
@@ -527,12 +625,12 @@
         <div class="tl-card">
           <div class="tl-header">
             <div>
-              <div class="tl-title">Full Stack Development Training - Upskilling</div>
-              <div class="tl-company"><i class="fas fa-graduation-cap" style="font-size:.75rem;color:var(--muted2)"></i><span class="tl-company-name">Internshala</span></div>
-              <div class="tl-date"><i class="fas fa-calendar-alt" style="font-size:.7rem"></i> Jul 2023 - Jan 2024</div>
+              <div class="tl-title">Full Stack Development</div>
+              <div class="tl-company"><img src="./images/ist-icon.png" style="height:35px; width:35px"/><span class="tl-company-name">Internshala</span></div>
+              <div class="tl-date"><i class="fas fa-calendar-alt" style="font-size:.7rem"></i>&nbsp; Jul 2023 - Jan 2024</div>
             </div>
             <div style="display:flex;flex-direction:column;align-items:flex-end;gap:.4rem">
-              <span class="tl-badge badge-intern">Training</span>
+              <span class="tl-badge badge-intern">Upskilling</span>
               <span class="tl-duration">6 Months</span>
             </div>
           </div>
@@ -550,8 +648,8 @@
           <div class="tl-header">
             <div>
               <div class="tl-title">Freelance Full-stack Developer</div>
-              <div class="tl-company"><i class="fas fa-laptop" style="font-size:.75rem;color:var(--muted2)"></i><span class="tl-company-name">Contract-based (Freelancer, LinkedIn, Referrals)</span></div>
-              <div class="tl-date"><i class="fas fa-calendar-alt" style="font-size:.7rem"></i> Feb 2019 - Jun 2023</div>
+              <div class="tl-company"><img src="./images/freelance-icon.png" style="height:50px; width:50px"/><span class="tl-company-name">Contract-based (Freelancer, LinkedIn, Referrals)</span></div>
+              <div class="tl-date"><i class="fas fa-calendar-alt" style="font-size:.7rem"></i>&nbsp; Feb 2019 - Jun 2023</div>
             </div>
             <div style="display:flex;flex-direction:column;align-items:flex-end;gap:.4rem">
               <span class="tl-badge badge-free">Freelance</span>
@@ -583,7 +681,36 @@
     </div>
     <div class="projects-grid">
 
+      <!-- Card 1: Terrogence Codex -->
       <div class="project-card fade-up">
+        <div class="slider-wrap">
+          <div class="slides" id="slides-codex">
+            <div class="slide">
+              <img src="./images/codex1.jpg" alt="Slide 1" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+            </div>
+            <div class="slide">
+              <img src="./images/codex2.jpg" alt="Slide 2" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+            </div>
+            <div class="slide">
+              <img src="./images/codex3.jpg" alt="Slide 3" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+            </div>
+            <div class="slide">
+              <img src="./images/codex4.jpg" alt="Slide 4" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+            </div>
+            <div class="slide">
+              <img src="./images/codex5.jpg" alt="Slide 5" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+            </div>
+          </div>
+          <button class="slider-btn prev" onclick="slidePrev('codex')">&#8592;</button>
+          <button class="slider-btn next" onclick="slideNext('codex')">&#8594;</button>
+          <div class="slider-dots" id="dots-codex">
+            <button class="dot active" onclick="slideTo('codex', 0)"></button>
+            <button class="dot" onclick="slideTo('codex', 1)"></button>
+            <button class="dot" onclick="slideTo('codex', 2)"></button>
+            <button class="dot" onclick="slideTo('codex', 3)"></button>
+            <button class="dot" onclick="slideTo('codex', 4)"></button>
+          </div>
+        </div>
         <div class="project-label">Professional Project</div>
         <h3>Terrogence Codex</h3>
         <p>Large-scale intelligence and research platform built on PHP (CodeIgniter), JavaScript, MySQL, and GCP. Features scalable REST APIs, high-volume data handling, advanced search and filtering, metadata-driven records, and media/document management.</p>
@@ -591,11 +718,42 @@
           <span>PHP</span><span>CodeIgniter</span><span>MySQL</span><span>GCP</span><span>JavaScript</span><span>REST APIs</span>
         </div>
         <div class="project-links">
-          <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> View Project</a>
+          <a href="https://codex.urbangab.com" target="_blank" class="project-link-viewproject">
+            <i class="fas fa-external-link-alt"></i> View Project
+          </a>
         </div>
       </div>
-
+    
+      <!-- Card 2: E-commerce Platform -->
       <div class="project-card fade-up">
+        <div class="slider-wrap">
+          <div class="slides" id="slides-ecom">
+            <div class="slide">
+              <img src="./images/myshopper1.jpg" alt="Slide 1" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+            </div>
+            <div class="slide">
+              <img src="./images/myshopper2.jpg" alt="Slide 2" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+            </div>
+            <div class="slide">
+              <img src="./images/myshopper3.jpg" alt="Slide 3" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+            </div>
+            <div class="slide">
+              <img src="./images/myshopper4.jpg" alt="Slide 4" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+            </div>
+            <div class="slide">
+              <img src="./images/myshopper5.jpg" alt="Slide 5" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+            </div>
+          </div>
+          <button class="slider-btn prev" onclick="slidePrev('ecom')">&#8592;</button>
+          <button class="slider-btn next" onclick="slideNext('ecom')">&#8594;</button>
+          <div class="slider-dots" id="dots-ecom">
+            <button class="dot active" onclick="slideTo('ecom', 0)"></button>
+            <button class="dot" onclick="slideTo('ecom', 1)"></button>
+            <button class="dot" onclick="slideTo('ecom', 2)"></button>
+            <button class="dot" onclick="slideTo('ecom', 3)"></button>
+            <button class="dot" onclick="slideTo('ecom', 4)"></button>
+          </div>
+        </div>
         <div class="project-label">Personal Project</div>
         <h3>E-commerce Platform</h3>
         <p>Full stack multi-vendor e-commerce web application. REST APIs for seller registration, product management, cart, orders, JWT authentication, and buyer workflows. Integrated Stripe demo payments. Deployed on Netlify and Firebase.</p>
@@ -603,12 +761,41 @@
           <span>Node.js</span><span>Express.js</span><span>React.js</span><span>MongoDB</span><span>JWT</span><span>Stripe</span>
         </div>
         <div class="project-links">
-          <a href="#" class="project-link"><i class="fab fa-github"></i> GitHub</a>
-          <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+          <a href="https://github.com/adilsqe13/Ecommerce-server" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+          <a href="https://myshopper-ff0dc.web.app/" target="_blank" class="project-link-livedemo"><i class="fas fa-external-link-alt"></i> Live Demo</a>
         </div>
       </div>
-
+    
+      <!-- Card 3: Social Media Platform -->
       <div class="project-card fade-up">
+        <div class="slider-wrap">
+          <div class="slides" id="slides-social">
+            <div class="slide">
+              <img src="./images/x1.jpg" alt="Slide 1" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+            </div>
+            <div class="slide">
+              <img src="./images/x2.jpg" alt="Slide 2" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+            </div>
+            <div class="slide">
+              <img src="./images/x3.jpg" alt="Slide 3" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+            </div>
+            <div class="slide">
+              <img src="./images/x4.jpg" alt="Slide 4" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+            </div>
+            <div class="slide">
+              <img src="./images/x5.jpg" alt="Slide 5" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+            </div>
+          </div>
+          <button class="slider-btn prev" onclick="slidePrev('social')">&#8592;</button>
+          <button class="slider-btn next" onclick="slideNext('social')">&#8594;</button>
+          <div class="slider-dots" id="dots-social">
+            <button class="dot active" onclick="slideTo('social', 0)"></button>
+            <button class="dot" onclick="slideTo('social', 1)"></button>
+            <button class="dot" onclick="slideTo('social', 2)"></button>
+            <button class="dot" onclick="slideTo('social', 3)"></button>
+            <button class="dot" onclick="slideTo('social', 4)"></button>
+          </div>
+        </div>
         <div class="project-label">Personal Project</div>
         <h3>Social Media Platform</h3>
         <p>Full stack Twitter/X-inspired social platform. REST APIs for authentication, post creation, feed generation, user profiles, likes, comments, and follow/unfollow. Optimized MongoDB schemas for high-read feed operations.</p>
@@ -616,11 +803,11 @@
           <span>Node.js</span><span>Express.js</span><span>React.js</span><span>MongoDB</span><span>JWT</span>
         </div>
         <div class="project-links">
-          <a href="#" class="project-link"><i class="fab fa-github"></i> GitHub</a>
-          <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+          <a href="https://github.com/adilsqe13/Twitter_Clone_Server" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+          <a href="https://easytweet-d58c4.web.app/" target="_blank" class="project-link-livedemo"><i class="fas fa-external-link-alt"></i> Live Demo</a>
         </div>
       </div>
-
+    
     </div>
   </div>
 </section>
@@ -639,6 +826,26 @@
         <div class="degree">B.Tech — Electronics &amp; Communication Engineering (ECE)</div>
         <div class="year"><i class="fas fa-calendar-alt" style="font-size:.75rem;margin-right:.35rem"></i>2014 - 2018 - Durgapur, West Bengal</div>
         <div class="gpa"><i class="fas fa-star" style="font-size:.7rem"></i> DGPA: 7.54</div>
+      </div>
+    </div>
+
+    <div class="edu-card fade-up">
+      <div class="edu-icon">&#x1F393;</div>
+      <div class="edu-details">
+        <h3>Bihar School Examination Board - Patna</h3>
+        <div class="degree">12th - ISC</div>
+        <div class="year"><i class="fas fa-calendar-alt" style="font-size:.75rem;margin-right:.35rem"></i>2012 - 2014 — Patna, Bihar</div>
+        <div class="gpa"><i class="fas fa-star" style="font-size:.7rem"></i> Result: 61.6%</div>
+      </div>
+    </div>
+
+    <div class="edu-card fade-up">
+      <div class="edu-icon">&#x1F393;</div>
+      <div class="edu-details">
+        <h3>West Bengal Board of Secondary Education</h3>
+        <div class="degree">10th - Board</div>
+        <div class="year"><i class="fas fa-calendar-alt" style="font-size:.75rem;margin-right:.35rem"></i>2011 — West Bengal</div>
+        <div class="gpa"><i class="fas fa-star" style="font-size:.7rem"></i> Result: 66.87%</div>
       </div>
     </div>
   </div>
@@ -670,16 +877,16 @@
         <div class="contact-social">
           <h4>Find me on</h4>
           <div class="social-links">
-            <a href="https://linkedin.com" target="_blank" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://github.com" target="_blank" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
-            <a href="https://leetcode.com" target="_blank" class="social-link" aria-label="LeetCode"><i class="fas fa-code"></i></a>
+            <a href="https://www.linkedin.com/in/md-adil-alam-6a3a69161/" target="_blank" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/adilsqe13" target="_blank" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://leetcode.com/u/Adilsqe13/" target="_blank" class="social-link" aria-label="LeetCode"><i class="fas fa-code"></i></a>
           </div>
         </div>
       </div>
       <div class="contact-cta fade-up">
         <h3>Open to new opportunities</h3>
         <p>Whether it's a full-time role, freelance project, or just a conversation about tech — feel free to reach out. I'm always happy to connect with fellow engineers and teams building great products.</p>
-        <a href="md_adil_alam_15th_April_2026.pdf" download class="download-btn">
+        <a href="md_adil_alam_resume.pdf" download class="download-btn">
           <i class="fas fa-download"></i> Download Resume
         </a>
       </div>
@@ -688,7 +895,7 @@
 </section>
 
 <footer>
-  <p>Designed &amp; built by <span>MD Adil Alam</span> - 2026 - Full Stack Developer</p>
+  <p>Designed &amp; built by <span>Md Adil Alam</span> - 2026 - Full Stack Developer</p>
 </footer>
 
 <button id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">
@@ -701,7 +908,7 @@
     "Full Stack Developer",
     "Backend Engineer",
     "Node.js Specialist",
-    "React.js Developer",
+    "Python Developer",
     "API Architect"
   ];
   let ri = 0, ci = 0, deleting = false;
@@ -768,6 +975,43 @@
       });
     }, { threshold: 0.3 }).observe(card);
   });
+
+//------------------------------------------Script by Adil----------------------------------
+
+  const sliderState = {};
+
+  function initSlider(id, total) {
+    sliderState[id] = { cur: 0, total };
+    sliderState[id].timer = setInterval(() => slideNext(id), 3000);
+  }
+
+  function goTo(id, n) {
+    const s = sliderState[id];
+    s.cur = (n + s.total) % s.total;
+    document.getElementById('slides-' + id).style.transform = `translateX(-${s.cur * 100}%)`;
+    document.querySelectorAll(`#dots-${id} .dot`).forEach((d, i) => d.classList.toggle('active', i === s.cur));
+  }
+
+  function slideNext(id) { goTo(id, sliderState[id].cur + 1); }
+
+  function slidePrev(id) {
+    clearInterval(sliderState[id].timer);
+    goTo(id, sliderState[id].cur - 1);
+    sliderState[id].timer = setInterval(() => slideNext(id), 3000);
+  }
+
+  function slideTo(id, n) {
+    clearInterval(sliderState[id].timer);
+    goTo(id, n);
+    sliderState[id].timer = setInterval(() => slideNext(id), 3000);
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    initSlider('codex', 5);
+    initSlider('ecom', 5);
+    initSlider('social', 5);
+  });
+</script>
 </script>
 </body>
 </html>
