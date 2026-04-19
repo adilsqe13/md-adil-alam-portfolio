@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Md Adil Alam — Full Stack Developer</title>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
@@ -84,7 +85,7 @@
   .mobile-menu.open{display:block;}
 
   /* SECTIONS */
-  section{padding:110px 0 90px;}
+  section{padding:35px 0 35px;}
   .container{max-width:1180px;margin:auto;padding:0 2rem;}
   .section-label{display:inline-flex;align-items:center;gap:.5rem;font-size:1rem;font-weight:700;letter-spacing:2.5px;color:var(--text);text-transform:uppercase;margin-bottom:1.75rem;background:var(--text-soft);padding:.4rem 1rem;border-radius:24px;box-shadow:var(--shadow-xs);}
   .section-title{font-size:2.5rem;font-weight:900;margin-bottom:3.5rem;line-height:1.15;color:var(--text);letter-spacing:-1px;}
@@ -98,7 +99,7 @@
   .hero-orb.o2{bottom:-80px;left:-100px;width:400px;height:400px;background:rgba(13,148,136,.07);}
   .hero-orb.o3{top:30%;left:40%;width:300px;height:300px;background:rgba(34,197,94,.06);}
   .hero-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:5rem;align-items:center;width:100%;position:relative;z-index:1;}
-  .hero-badge{display:inline-flex;align-items:center;gap:.6rem;background:var(--card);border:1.5px solid var(--border);color:var(--text);padding:.45rem 1.1rem;border-radius:28px;font-size:.8rem;font-weight:700;margin-bottom:0.2rem;box-shadow:var(--shadow-sm);letter-spacing:.3px;margin-top:0.3rem;margin-left:2.8rem}
+  .hero-badge{display:inline-flex;align-items:center;gap:.6rem;background:var(--card);border:1.5px solid var(--border);color:var(--text);padding:.45rem 1.1rem;border-radius:28px;font-size:.8rem;font-weight:700;margin-bottom:0.2rem;box-shadow:var(--shadow-sm);letter-spacing:.3px;margin-top:0.3rem;margin-left:3rem}
   .hero-badge .dot{width:8px;height:8px;border-radius:50%;background:var(--accent3);box-shadow:0 0 8px rgba(34,197,94,.5);animation:pulse-dot 2s ease-in-out infinite;}
   @keyframes pulse-dot{0%,100%{box-shadow:0 0 8px rgba(34,197,94,.5),0 0 0 0 rgba(34,197,94,.3);}50%{box-shadow:0 0 8px rgba(34,197,94,.5),0 0 0 6px rgba(34,197,94,0);}}
   h1.hero-name{font-size:clamp(2.6rem,5vw,4.2rem);font-weight:900;line-height:1.05;margin-bottom:.6rem;letter-spacing:-2px;color:var(--text);}
@@ -220,13 +221,38 @@
   /* EDUCATION */
   #education{background:var(--bg2);position:relative;}
   #education::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--accent-light2),transparent);}
-  .edu-card{background:var(--card);border:1.5px solid var(--border);border-radius:22px;padding:1rem;display:flex;gap:1.75rem;align-items:flex-start;max-width:740px;transition:all var(--transition);box-shadow:var(--shadow-sm);margin-top:1rem}
+  .edu-card{background:var(--card);border:1.5px solid var(--border);border-radius:22px;padding:1rem;display:flex;gap:1.75rem;align-items:flex-start;transition:all var(--transition);box-shadow:var(--shadow-sm);margin-top:1rem}
   .edu-card:hover{border-color:var(--border-hover);box-shadow:var(--shadow-lg);transform:translateY(-3px);}
   .edu-icon{width:60px;height:60px;min-width:60px;border-radius:var(--radius);background:var(--accent-soft);display:flex;align-items:center;justify-content:center;font-size:1.7rem;box-shadow:var(--shadow-xs);}
+  .edu-icon img{height:4rem;width:4rem}
   .edu-details h3{font-size:1.1rem;font-weight:800;margin-bottom:.35rem;color:var(--text);letter-spacing:-.3px;}
   .edu-details .degree{font-size:.92rem;color:var(--accent2);margin-bottom:.35rem;font-weight:600;}
   .edu-details .year{font-size:.84rem;color:var(--muted2);font-weight:500;}
   .edu-details .gpa{display:inline-flex;align-items:center;gap:.3rem;margin-top:.7rem;font-size:.8rem;padding:.3rem .8rem;border-radius:8px;background:var(--accent-soft);color:var(--accent2);font-weight:700;box-shadow:var(--shadow-xs);}
+
+  /* HOBBIES & LANGUAGES */
+  #hobbies-languages{position:relative;background:var(--bg);}
+  #hobbies-languages::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--accent-light2),transparent);}
+  .hl-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;}
+  .hl-block-title{font-size:1.15rem;font-weight:800;color:var(--text2);margin-bottom:1.2rem;letter-spacing:-.2px;display:flex;align-items:center;gap:.6rem;}
+  .hl-block-title i{color:var(--accent);font-size:1rem;}
+  .hobbies-list{display:grid;grid-template-columns:1fr 1fr;gap:.85rem;}
+  .hobby-item{background:var(--card);border:1.5px solid var(--border);border-radius:var(--radius-sm);padding:.9rem 1.1rem;display:flex;align-items:center;gap:.8rem;transition:all var(--transition);box-shadow:var(--shadow-xs);cursor:default;}
+  .hobby-item:hover{border-color:var(--border-hover);box-shadow:var(--shadow-md);transform:translateY(-3px);}
+  .hobby-item .hobby-icon{width:38px;height:38px;min-width:38px;border-radius:10px;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;font-size:.9rem;color:var(--accent2);}
+  .hobby-item .hobby-name{font-size:.88rem;font-weight:700;color:var(--text2);}
+  .languages-list{display:flex;flex-direction:column;gap:.85rem;}
+  .lang-item{background:var(--card);border:1.5px solid var(--border);border-radius:var(--radius-sm);padding:1rem 1.2rem;transition:all var(--transition);box-shadow:var(--shadow-xs);}
+  .lang-item:hover{border-color:var(--border-hover);box-shadow:var(--shadow-md);transform:translateX(4px);}
+  .lang-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:.6rem;}
+  .lang-name{font-size:.92rem;font-weight:800;color:var(--text2);display:flex;align-items:center;gap:.55rem;}
+  .lang-name .lang-flag{font-size:1.1rem;}
+  .lang-level{font-size:.72rem;font-weight:700;padding:.25rem .7rem;border-radius:8px;letter-spacing:.3px;}
+  .level-native{background:var(--accent-soft);color:var(--accent2);}
+  .level-professional{background:var(--blue-soft);color:var(--blue);}
+  .level-conversational{background:var(--amber-soft);color:var(--amber);}
+  .lang-bar{height:5px;background:var(--bg3);border-radius:3px;overflow:hidden;}
+  .lang-bar-fill{height:100%;border-radius:3px;background:linear-gradient(90deg,var(--accent),var(--accent3));transition:width 1.8s cubic-bezier(.22,1,.36,1);}
 
   /* CONTACT */
   #contact{position:relative;}
@@ -247,7 +273,7 @@
   .contact-cta::before{content:'';position:absolute;top:-80px;right:-80px;width:250px;height:250px;background:radial-gradient(circle,var(--accent-soft),transparent);pointer-events:none;}
   .contact-cta::after{content:'';position:absolute;bottom:-60px;left:-60px;width:200px;height:200px;background:radial-gradient(circle,rgba(13,148,136,.05),transparent);pointer-events:none;}
   .contact-cta h3{font-size:1.4rem;font-weight:900;margin-bottom:.8rem;color:var(--text);letter-spacing:-.5px;position:relative;}
-  .contact-cta > p{color:var(--muted);font-size:.92rem;margin-bottom:1.8rem;line-height:1.85;position:relative;font-weight:400;}
+  .contact-cta > p{color:var(--muted);font-size:.92rem;margin-bottom:0rem;line-height:1.85;position:relative;font-weight:400;}
   .contact-cta .download-btn{display:inline-flex;align-items:center;gap:.65rem;background:linear-gradient(135deg,var(--themered2),var(--themered1));color:#fff;padding:.9rem 1.9rem;border-radius:var(--radius-sm);text-decoration:none;font-weight:800;font-size:.92rem;transition:all var(--transition);box-shadow:var(--shadow-green);position:relative;letter-spacing:.2px;}
   .contact-cta .download-btn:hover{transform:translateY(-3px);box-shadow:var(--shadow-green-lg);}
 
@@ -285,19 +311,22 @@
     .hero-stats{gap:.75rem;}
     .hero-stat{min-width:84px;padding:.65rem .8rem;}
     .projects-grid{grid-template-columns:1fr;}
-    section{padding:80px 0 60px;}
+    section{padding:35px 0 35px;}
+    .hl-grid{grid-template-columns:1fr;}
+    .hobbies-list{grid-template-columns:1fr 1fr;}
   }
   @media(max-width:480px){
     .container{padding:0 1.25rem;}
     h1.hero-name{font-size:2.2rem;}
     .hero-btns{flex-direction:column;}
     .section-title{font-size:1.6rem;}
+    .hobbies-list{grid-template-columns:1fr;}
   }
 
   /*---------------------------------------------CSS by Adil----------------------------------------*/
 
   .hero-avatar {
-    width: 19.8125rem;   /* 317px */
+    width: 19.8125rem;
     height: 19.8125rem;
     overflow: hidden;
   }
@@ -309,7 +338,7 @@
   }
   
   .skill-icon {
-    width: 6.25rem;   /* 100px */
+    width: 6.25rem;
     height: 6.25rem;
     overflow: hidden;
   }
@@ -323,10 +352,10 @@
   .slider-wrap {
     position: relative;
     width: 100%;
-    height: 12.5rem;   /* 200px */
+    height: 12.5rem;
     overflow: hidden;
     background: #f0f0f0;
-    border-radius: 0.5rem 0.5rem 0 0;  /* 8px */
+    border-radius: 0.5rem 0.5rem 0 0;
   }
   
   .slides {
@@ -354,9 +383,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.5rem;   /* 8px */
+    gap: 0.5rem;
     color: #999;
-    font-size: 0.8125rem;   /* 13px */
+    font-size: 0.8125rem;
   }
   
   .slide-placeholder svg { opacity: 0.4; }
@@ -368,28 +397,28 @@
     background: rgba(0,0,0,0.45);
     border: none;
     color: #fff;
-    width: 2rem;   /* 32px */
+    width: 2rem;
     height: 2rem;
     border-radius: 50%;
     cursor: pointer;
-    font-size: 0.875rem;   /* 14px */
+    font-size: 0.875rem;
     z-index: 2;
   }
   
-  .slider-btn.prev { left: 0.625rem; }   /* 10px */
+  .slider-btn.prev { left: 0.625rem; }
   .slider-btn.next { right: 0.625rem; }
   
   .slider-dots {
     position: absolute;
-    bottom: 0.5rem;   /* 8px */
+    bottom: 0.5rem;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    gap: 0.3125rem;   /* 5px */
+    gap: 0.3125rem;
   }
   
   .dot {
-    width: 0.625rem;   /* 10px */
+    width: 0.625rem;
     height: 0.625rem;
     border-radius: 50%;
     background: rgba(255,255,255,0.5);
@@ -416,7 +445,7 @@
 
   .adapt-screen {
     width: 100%;
-    max-width: 493px;   /* optional (control size) */
+    max-width: 493px;
     margin-bottom: 0.7rem;
   }
   
@@ -424,6 +453,71 @@
     width: 100%;
     height: auto;
     display: block;
+    border-radius: var(--radius);
+  }
+
+  .edu-row {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    gap: 4px;
+  }
+  
+  /* Desktop optimization */
+  @media (min-width: 768px) {
+    .edu-row {
+      flex-direction: column;
+    }
+  
+    .degree {
+      font-weight: 500;
+    }
+  
+    .meta {
+      font-size: 13px;
+      color: #666;
+    }
+  }
+
+  .what-i-want {
+    margin-top: 50px;
+    text-align: center;
+  }
+  
+  .section-title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  
+  .want-card {
+    background: #fff;
+    padding: 1rem 1rem;
+    border-radius: 12px;
+    transition: 0.3s;
+    height: 100%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  }
+  
+  .want-card img {
+    width: 100%;
+    margin-bottom: 5px;
+    border-radius: var(--radius);
+    height:12rem;
+  }
+  
+  .want-card h4 {
+    margin-bottom: 10px;
+  }
+  
+  .want-card p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  .want-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
   }
 </style>
 </head>
@@ -433,13 +527,14 @@
 <nav id="navbar">
   <div class="nav-inner">
     <div class="logo"><span class="name"> <img src="./images/logo-icon.png" style="height: 3.68rem; width:3.8rem"> </span></div>
-    <ul class="nav-links">
+    <ul class="nav-links" style="margin-bottom:0rem">
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#certificates">Certificates</a></li>
       <li><a href="#education">Education</a></li>
+      <li><a href="#hobbies-languages">Hobbies</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
     <a href="md_adil_alam_resume.pdf" download class="nav-cta"><i class="fas fa-download"></i> Resume</a>
@@ -455,6 +550,7 @@
   <a href="#projects" onclick="closeMenu()">Projects</a>
   <a href="#certificates" onclick="closeMenu()">Certificates</a>
   <a href="#education" onclick="closeMenu()">Education</a>
+  <a href="#hobbies-languages" onclick="closeMenu()">Hobbies & Languages</a>
   <a href="#contact" onclick="closeMenu()">Contact</a>
 </div>
 
@@ -482,7 +578,7 @@
       </div>
       <div class="hero-img-wrap">
         <div class="hero-visual">
-          <div class="hero-badge"><span class="dot"></span> Available for opportunities</div>
+          <div class="hero-badge"><span class="dot"></span> Open to new opprtunities</div>
           <div class="hero-avatar"><img src="./images/adil_profile_img.jpeg"/></div>
           
           <div class="hero-stats">
@@ -501,7 +597,7 @@
   <div class="container">
     <div class="fade-up">
       <div class="section-label"><i class="fas fa-user"></i> About Me</div>
-      <h2 class="section-title">Who I <span>Am</span></h2>
+      <h2 class="section-title">Who&nbsp;&nbsp;I&nbsp;&nbsp;<span>Am</span></h2>
     </div>
     <div class="about-grid">
       <div class="about-text fade-up">
@@ -517,8 +613,8 @@
       </div>
       <div class="about-cards fade-up">
         <div class="about-card">
+          <h3 style="margin-bottom: 0.9rem">Full Stack Engineering</h3>
           <div class="adapt-screen"><img src="./images/full-stack.png"/></div>
-          <h4>Full Stack Engineering</h4>
           <p class="text-jstify">I design and develop scalable backend systems using well-structured REST APIs.
             I focus on building clean, efficient, and maintainable server-side architectures.
             I specialize in database design with strong emphasis on query optimization.
@@ -526,6 +622,51 @@
             I work with high-volume data handling for real-world production environments.
             I prioritize performance, scalability, and system reliability in every solution.
             I build production-ready systems that are robust, efficient, and future-ready.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" style="margin-top:5rem">
+    <div class="fade-up">
+      <h2 class="section-title">Career <span>Goals</span></h2>
+    </div>
+    <div class="what-i-want">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="want-card">
+            <img src="./images/great-culture.jpg" alt="Culture">
+            <h4>Great Culture</h4>
+            <p class="text-jstify">
+              I want to work in a positive and collaborative environment where ideas are respected, 
+              learning is encouraged, and teamwork drives success. A strong culture helps build 
+              better products and better engineers.
+            </p>
+          </div>
+        </div>
+    
+        <div class="col-md-4">
+          <div class="want-card">
+            <img src="./images/opportunity-icon.jpg" alt="Growth">
+            <h4>Growth & Opportunities</h4>
+            <p class="text-jstify">
+              I am looking for opportunities where I can continuously learn, take on new challenges, 
+              and grow as a Full Stack / Backend Developer. I believe growth comes from solving 
+              real-world problems and pushing limits.
+            </p>
+          </div>
+        </div>
+    
+        <div class="col-md-4">
+          <div class="want-card">
+            <img src="./images/vision-icon.jpg" alt="Vision">
+            <h4>Strong Vision</h4>
+            <p class="text-jstify">
+              I strive to design and build systems that are scalable, reliable, and impactful.
+I believe in continuous learning, ownership, and delivering high-quality solutions.
+My vision is to create technology that solves real problems and reaches millions.
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -869,34 +1010,139 @@
       <div class="section-label"><i class="fas fa-graduation-cap"></i> Academic</div>
       <h2 class="section-title">My <span>Education</span></h2>
     </div>
-    <div class="edu-card fade-up">
-      <div class="edu-icon">&#x1F393;</div>
-      <div class="edu-details">
-        <h3>Bengal College of Engineering &amp; Technology</h3>
-        <div class="degree">B.Tech — Electronics &amp; Communication Engineering (ECE)</div>
-        <div class="year"><i class="fas fa-calendar-alt" style="font-size:.75rem;margin-right:.35rem"></i>2014 - 2018 - Durgapur, West Bengal</div>
-        <div class="gpa"><i class="fas fa-star" style="font-size:.7rem"></i> DGPA: 7.54</div>
+
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="edu-card fade-up">
+          <div class="edu-icon"><img src="./images/bcet-icon.jpg"></div>
+          <div class="edu-details">
+            <h3>Bengal College of Engineering & Technology</h3>
+    
+            <div class="edu-row">
+              <span class="degree">B.Tech — ECE</span>
+              <span class="meta">
+                <i class="fas fa-calendar-alt"></i>&nbsp; 2014 - 2018, Durgapur
+                &nbsp; | &nbsp;
+                <i class="fas fa-star"></i> 7.54
+              </span>
+            </div>
+    
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-lg-4">
+        <div class="edu-card fade-up">
+          <div class="edu-icon"><img src="./images/bseb-icon.jpg"></div>
+          <div class="edu-details">
+            <h3>Bihar School Examination Board - Patna</h3>
+    
+            <div class="edu-row">
+              <span class="degree">12th - ISC</span>
+              <span class="meta">
+                <i class="fas fa-calendar-alt"></i>&nbsp; 2012 - 2014, Patna
+                &nbsp; | &nbsp;
+                <i class="fas fa-star"></i> 61.6%
+              </span>
+            </div>
+    
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-lg-4">
+        <div class="edu-card fade-up">
+          <div class="edu-icon"><img src="./images/wbbse-icon.png"></div>
+          <div class="edu-details">
+            <h3>West Bengal Board of Secondary Education</h3>
+    
+            <div class="edu-row">
+              <span class="degree">10th - Board</span>
+              <span class="meta">
+                <i class="fas fa-calendar-alt"></i>&nbsp; 2011, West Bengal
+                &nbsp; | &nbsp;
+                <i class="fas fa-star"></i> 66.87%
+              </span>
+            </div>
+    
+          </div>
+        </div>
       </div>
     </div>
+  </div>
+</section>
 
-    <div class="edu-card fade-up">
-      <div class="edu-icon">&#x1F393;</div>
-      <div class="edu-details">
-        <h3>Bihar School Examination Board - Patna</h3>
-        <div class="degree">12th - ISC</div>
-        <div class="year"><i class="fas fa-calendar-alt" style="font-size:.75rem;margin-right:.35rem"></i>2012 - 2014 — Patna, Bihar</div>
-        <div class="gpa"><i class="fas fa-star" style="font-size:.7rem"></i> Result: 61.6%</div>
-      </div>
+<!-- HOBBIES & LANGUAGES -->
+<section id="hobbies-languages">
+  <div class="container">
+    <div class="fade-up">
+      <div class="section-label"><i class="fas fa-heart"></i> Personal</div>
+      <h2 class="section-title">Hobbies &amp; <span>Languages</span></h2>
     </div>
+    <div class="hl-grid">
 
-    <div class="edu-card fade-up">
-      <div class="edu-icon">&#x1F393;</div>
-      <div class="edu-details">
-        <h3>West Bengal Board of Secondary Education</h3>
-        <div class="degree">10th - Board</div>
-        <div class="year"><i class="fas fa-calendar-alt" style="font-size:.75rem;margin-right:.35rem"></i>2011 — West Bengal</div>
-        <div class="gpa"><i class="fas fa-star" style="font-size:.7rem"></i> Result: 66.87%</div>
+      <!-- HOBBIES -->
+      <div class="fade-up">
+        <div class="hl-block-title"><i class="fas fa-gamepad"></i> Hobbies &amp; Interests</div>
+        <div class="hobbies-list">
+          <div class="hobby-item">
+            <div class="hobby-icon"><i class="fas fa-book-open"></i></div>
+            <div class="hobby-name">Reading Books</div>
+          </div>
+          <div class="hobby-item">
+            <div class="hobby-icon"><i class="fas fa-music"></i></div>
+            <div class="hobby-name">Listening Music</div>
+          </div>
+          <div class="hobby-item">
+            <div class="hobby-icon"><i class="fas fa-futbol"></i></div>
+            <div class="hobby-name">Playing Football</div>
+          </div>
+          <div class="hobby-item">
+            <div class="hobby-icon"><i class="fas fa-film"></i></div>
+            <div class="hobby-name">Watching Movies</div>
+          </div>
+          <div class="hobby-item">
+            <div class="hobby-icon"><i class="fas fa-plane"></i></div>
+            <div class="hobby-name">Travelling</div>
+          </div>
+        </div>
       </div>
+
+      <!-- LANGUAGES -->
+      <div class="fade-up">
+        <div class="hl-block-title"><i class="fas fa-language"></i> Languages</div>
+        <div class="languages-list">
+          <div class="lang-item">
+            <div class="lang-header">
+              <div class="lang-name"> English</div>
+              <span class="lang-level level-professional">Professional</span>
+            </div>
+            <div class="lang-bar"><div class="lang-bar-fill" data-width="85" style="width:0"></div></div>
+          </div>
+          <div class="lang-item">
+            <div class="lang-header">
+              <div class="lang-name"> Urdu</div>
+              <span class="lang-level level-native">Native</span>
+            </div>
+            <div class="lang-bar"><div class="lang-bar-fill" data-width="95" style="width:0"></div></div>
+          </div>
+          <div class="lang-item">
+            <div class="lang-header">
+              <div class="lang-name"> Hindi</div>
+              <span class="lang-level level-native">Native</span>
+            </div>
+            <div class="lang-bar"><div class="lang-bar-fill" data-width="100" style="width:0"></div></div>
+          </div>
+          <div class="lang-item">
+            <div class="lang-header">
+              <div class="lang-name"> Bengali</div>
+              <span class="lang-level level-conversational">Conversational</span>
+            </div>
+            <div class="lang-bar"><div class="lang-bar-fill" data-width="60" style="width:0"></div></div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -933,13 +1179,7 @@
           </div>
         </div>
       </div>
-      <div class="contact-cta fade-up">
-        <h3>Open to new opportunities</h3>
-        <p class="text-jstify">Whether it's a full-time role, freelance project, or just a conversation about tech — feel free to reach out. I'm always happy to connect with fellow engineers and teams building great products.</p>
-        <a href="md_adil_alam_resume.pdf" download class="download-btn">
-          <i class="fas fa-download"></i> Download Resume
-        </a>
-      </div>
+      
     </div>
   </div>
 </section>
@@ -1013,12 +1253,12 @@
 
   document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
-  // Skill bars observer
-  document.querySelectorAll('.skill-card').forEach(card => {
+  // Skill bars observer (also covers lang bars)
+  document.querySelectorAll('.skill-card, .lang-item').forEach(card => {
     new IntersectionObserver((entries) => {
       entries.forEach(e => {
         if (e.isIntersecting) {
-          e.target.querySelectorAll('.skill-bar-fill').forEach(bar => {
+          e.target.querySelectorAll('.skill-bar-fill, .lang-bar-fill').forEach(bar => {
             setTimeout(() => { bar.style.width = bar.dataset.width + '%'; }, 300);
           });
         }
@@ -1061,7 +1301,6 @@
     initSlider('ecom', 5);
     initSlider('social', 5);
   });
-</script>
 </script>
 </body>
 </html>
