@@ -191,7 +191,8 @@
   .badge-full{background:var(--accent-soft);color:var(--accent2);border:1px solid rgba(22,163,74,.2);}
   .badge-intern{background:var(--blue-soft);color:var(--blue);border:1px solid rgba(37,99,235,.15);}
   .badge-free{background:var(--amber-soft);color:var(--amber);border:1px solid rgba(217,119,6,.15);}
-  .tl-date{font-size:.8rem;color:var(--muted2);margin-top:.35rem;font-weight:600;}
+  .tl-date{font-size:.8rem;color:var(--text);margin-top:.35rem;font-weight:600;margin-left:0.3rem;}
+  .tl-date span{margin-left:0.1rem;}
   .tl-duration{font-size:.75rem;color:var(--themered2);font-weight:700;background:var(--themered3);padding:.25rem .7rem;border-radius:8px;letter-spacing:.2px;}
   .tl-body ul{padding-left:1.1rem;margin-top:.7rem;}
   .tl-body li{font-size:.88rem;color:var(--muted);margin-bottom:.5rem;line-height:1.7;font-weight:400;}
@@ -428,7 +429,7 @@
   }
   
   .dot.active { background: #fff; }
-  .text-jstify{
+  .text-justify{
     text-align:justify;
   }
 
@@ -438,10 +439,14 @@
   
   .responsive-img {
     width: 100%;
-    height: auto;
-    display: block;
+    height: 100%;
     object-fit: cover;
-    margin-top:20px;
+    margin-top: 20px;
+  }
+  
+  /* Right side image full height */
+  .full-height {
+    height: 100%;
   }
 
   .adapt-screen {
@@ -613,7 +618,7 @@
       <div>
         <h1 class="hero-name">Md Adil<br><span class="green">Alam</span></h1>
         <div class="hero-role" id="typing-text"></div>
-        <p class="hero-desc text-jstify">Full Stack Engineer with <strong>6+</strong> years of experience across freelance and product environments, building scalable web applications using Node.js, Express.js, React.js with additional experience in Python/Django, MySQL, and GCP . Experienced in developing REST APIs, database-driven systems, large-dataset search features, backend optimization, and cloud-based application deployment.</p>
+        <p class="hero-desc text-justify">Full Stack Engineer with <strong>6+</strong> years of experience across freelance and product environments, building scalable web applications using Node.js, Express.js, React.js with additional experience in Python/Django, MySQL, and GCP . Experienced in developing REST APIs, database-driven systems, large-dataset search features, backend optimization, and cloud-based application deployment.</p>
         <div class="hero-btns">
           <a href="#projects" class="btn-primary"><i class="fas fa-code"></i> View Projects</a>
           <a href="#contact" class="btn-outline"><i class="fas fa-envelope"></i> Get in Touch</a>
@@ -650,9 +655,9 @@
     </div>
     <div class="about-grid">
       <div class="about-text fade-up">
-        <p class="text-jstify">I'm a <strong>Full Stack Engineer</strong> with over 6 years of hands-on experience across freelance contracts and product companies. I specialize in building scalable, performance-focused web applications from backend APIs to user-facing interfaces.</p>
-        <p class="text-jstify">My core stack revolves around <strong>Node.js, Express.js, and React.js</strong>, with solid additional experience in <strong>Python/Django, PHP, MySQL</strong>, and cloud deployments on <strong>GCP</strong>. I care deeply about clean architecture, query optimization, and writing code that scales.</p>
-        <p class="text-jstify">Currently working as <strong>Software Engineer I at Bitpastel Solution Pvt. Ltd.</strong>, where I lead backend development for data-intensive research platforms.</p>
+        <p class="text-justify">I'm a <strong>Full Stack Engineer</strong> with over 6 years of hands-on experience across freelance contracts and product companies. I specialize in building scalable, performance-focused web applications from backend APIs to user-facing interfaces.</p>
+        <p class="text-justify">My core stack revolves around <strong>Node.js, Express.js, and React.js</strong>, with solid additional experience in <strong>Python/Django, PHP, MySQL</strong>, and cloud deployments on <strong>GCP</strong>. I care deeply about clean architecture, query optimization, and writing code that scales.</p>
+        <p class="text-justify">Currently working as <strong>Software Engineer I at Bitpastel Solution Pvt. Ltd.</strong>, where I lead backend development for data-intensive research platforms.</p>
         <div class="about-info">
           <div class="about-info-item"><i class="fas fa-map-marker-alt"></i><span>Kolkata, West Bengal, India</span></div>
           <div class="about-info-item"><i class="fas fa-envelope"></i><a href="mailto:adilsqe13@gmail.com">adilsqe13@gmail.com</a></div>
@@ -664,7 +669,7 @@
         <div class="about-card">
           <h3 style="margin-bottom: 0.9rem">Full Stack Engineering</h3>
           <div class="adapt-screen"><img src="./images/full-stack.png"/></div>
-          <p class="text-jstify">I design and develop scalable backend systems using well-structured REST APIs.
+          <p class="text-justify">I design and develop scalable backend systems using well-structured REST APIs.
             I focus on building clean, efficient, and maintainable server-side architectures.
             I specialize in database design with strong emphasis on query optimization.
             I ensure fast and reliable data access even under heavy load conditions.
@@ -682,55 +687,55 @@
   <div class="container">
     <div class="fade-up">
       <div class="section-label"><i class="fas fa-tools"></i> Technical Skills</div>
-      <h2 class="section-title">My <span>Stack</span></h2>
+      <h2 class="section-title">My &nbsp;&nbsp;<span>Stack</span></h2>
     </div>
     <div class="skills-grid">
       <div class="skill-card fade-up">
         <div class="skill-icon"><img src="./images/nodejs-icon.png"></div>
         <h4>Node.js</h4>
-        <p class="text-jstify">Developed high-performance backend systems using Node.js with optimized APIs.</p>
+        <p class="text-justify">Developed high-performance backend systems using Node.js with optimized APIs.</p>
         <div class="skill-bar"><div class="skill-bar-fill" data-width="90" style="width:0"></div></div>
         <div class="skill-tags"><span class="skill-tag">Express.js</span><span class="skill-tag">RESTful APIs</span><span class="skill-tag">Middleware</span><span class="skill-tag">OOPS</span><span class="skill-tag">JWT</span></div>
       </div>
       <div class="skill-card fade-up">
         <div class="skill-icon"><img src="./images/reactjs-icon.png"></div>
         <h4>React.js</h4>
-        <p class="text-jstify">Experienced in React with hooks, state management, and component-based architecture.</p>
+        <p class="text-justify">Experienced in React with hooks, state management, and component-based architecture.</p>
         <div class="skill-bar"><div class="skill-bar-fill" data-width="80" style="width:0"></div></div>
         <div class="skill-tags"><span class="skill-tag">React Hooks</span><span class="skill-tag">Context</span><span class="skill-tag">SPA</span></div>
       </div>
       <div class="skill-card fade-up">
         <div class="skill-icon"><img src="./images/python-icon.png"></div>
         <h4>Python</h4>
-        <p class="text-jstify">Proficient in Python for development and scripting, with hands-on experience in APIs, data processing.</p>
+        <p class="text-justify">Proficient in Python for development and scripting, with hands-on experience in APIs, data processing.</p>
         <div class="skill-bar"><div class="skill-bar-fill" data-width="75" style="width:0"></div></div>
         <div class="skill-tags"><span class="skill-tag">Django</span><span class="skill-tag">DRF</span><span class="skill-tag">ORM</span></div>
       </div>
       <div class="skill-card fade-up">
         <div class="skill-icon"><img src="./images/mysql-icon.png"></div>
         <h4>MySQL</h4>
-        <p class="text-jstify">Strong experience with MySQL for database design and query optimization.</p>
+        <p class="text-justify">Strong experience with MySQL for database design and query optimization.</p>
         <div class="skill-bar"><div class="skill-bar-fill" data-width="85" style="width:0"></div></div>
         <div class="skill-tags"><span class="skill-tag">Schema Design</span><span class="skill-tag">Indexing</span><span class="skill-tag">Optimization</span></div>
       </div>
       <div class="skill-card fade-up">
         <div class="skill-icon"><img src="./images/gcp-icon.png"></div>
         <h4>Cloud & DevOps</h4>
-        <p class="text-jstify">Deployed and managed applications on Google Cloud using cloud-native services.</p>
+        <p class="text-justify">Deployed and managed applications on Google Cloud using cloud-native services.</p>
         <div class="skill-bar"><div class="skill-bar-fill" data-width="65" style="width:0"></div></div>
         <div class="skill-tags"><span class="skill-tag">GCP</span><span class="skill-tag">AWS</span><span class="skill-tag">Docker</span><span class="skill-tag">Git</span></div>
       </div>
       <div class="skill-card fade-up">
         <div class="skill-icon"><img src="./images/system-design-icon.png"></div>
         <h4>System Design</h4>
-        <p class="text-jstify">Skilled in scalable backend, APIs & cloud design (HLD/LLD), with focus on performance optimization.</p>
+        <p class="text-justify">Skilled in scalable backend, APIs & cloud design (HLD/LLD), with focus on performance optimization.</p>
         <div class="skill-bar"><div class="skill-bar-fill" data-width="70" style="width:0"></div></div>
         <div class="skill-tags"><span class="skill-tag">HLD</span><span class="skill-tag">LLD</span><span class="skill-tag">LLMs</span></div>
       </div>
       <div class="skill-card fade-up">
         <div class="skill-icon"><img src="./images/dsa-icon.png"></div>
         <h4>DSA</h4>
-        <p class="text-jstify">Strong foundation in DSA with efficient problem-solving skills, focusing on optimized solutions.</p>
+        <p class="text-justify">Strong foundation in DSA with efficient problem-solving skills, focusing on optimized solutions.</p>
         <div class="skill-bar"><div class="skill-bar-fill" data-width="70" style="width:0"></div></div>
         <div class="skill-tags"><span class="skill-tag">Data structures</span><span class="skill-tag">Algorithms</span><span class="skill-tag">Sorting & Searching</span></div>
       </div>
@@ -743,7 +748,7 @@
   <div class="container">
     <div class="fade-up">
       <div class="section-label"><i class="fas fa-briefcase"></i> Career</div>
-      <h2 class="section-title">Work <span>Experience</span></h2>
+      <h2 class="section-title">Work&nbsp;&nbsp; <span>Experience</span></h2>
     </div>
     <div class="timeline">
 
@@ -754,7 +759,7 @@
           <div>
             <div class="tl-title">Software Engineer I</div>
             <div class="tl-company"><img src="./images/bitpastel-icon.jpg" style="height:50px; width:50px"/><span class="tl-company-name">Bitpastel Solution Private Limited</span></div>
-              <div class="tl-date"><i class="fas fa-calendar-alt" style="font-size:.7rem"></i>&nbsp; Nov 2024 - Present</div>
+              <div class="tl-date"><i class="fas fa-calendar-alt" style="font-size:.7rem"></i>&nbsp; <span>Nov 2024 - Present</spam></div>
             </div>
             <div style="display:flex;align-items:flex-end;gap:.4rem">
               <span class="tl-badge badge-full">Full-time</span>
@@ -763,12 +768,12 @@
           </div>
           <div class="tl-body">
             <ul>
-              <li class="text-jstify">Led backend-focused development across multiple web applications and data-driven platforms.</li>
-              <li class="text-jstify">Designed and maintained scalable REST APIs using Node.js, Express.js, PHP, and Python/Django.</li>
-              <li class="text-jstify">Built React.js-based features and contributed to full stack application development.</li>
-              <li class="text-jstify">Worked on MySQL database design, query optimization, and indexing for performance improvement.</li>
-              <li class="text-jstify">Implemented search, filtering, and admin workflows for large datasets and business use cases.</li>
-              <li class="text-jstify">Contributed to cloud deployment on GCP, code reviews, and version control.</li>
+              <li class="text-justify">Led backend-focused development across multiple web applications and data-driven platforms.</li>
+              <li class="text-justify">Designed and maintained scalable REST APIs using Node.js, Express.js, PHP, and Python/Django.</li>
+              <li class="text-justify">Built React.js-based features and contributed to full stack application development.</li>
+              <li class="text-justify">Worked on MySQL database design, query optimization, and indexing for performance improvement.</li>
+              <li class="text-justify">Implemented search, filtering, and admin workflows for large datasets and business use cases.</li>
+              <li class="text-justify">Contributed to cloud deployment on GCP, code reviews, and version control.</li>
             </ul>
           </div>
         </div>
@@ -781,7 +786,7 @@
             <div>
               <div class="tl-title">Software Engineer - Intern</div>
               <div class="tl-company"><img src="./images/bitpastel-icon.jpg" style="height:50px; width:50px"/><span class="tl-company-name">Bitpastel Solution Private Limited</span></div>
-              <div class="tl-date"><i class="fas fa-calendar-alt" style="font-size:.7rem"></i>&nbsp; May 2024 - Nov 2024</div>
+              <div class="tl-date"><i class="fas fa-calendar-alt" style="font-size:.7rem"></i>&nbsp; <span>May 2024 - Nov 2024</span></div>
             </div>
             <div style="display:flex;align-items:flex-end;gap:.4rem">
               <span class="tl-badge badge-full">Internship</span>
@@ -790,10 +795,10 @@
           </div>
           <div class="tl-body">
             <ul>
-              <li class="text-jstify">Joined as Backend Intern after completing full-stack training, transitioning from freelance development.</li>
-              <li class="text-jstify">Contributed to the backend of Terrogence Codex — feature development and bug fixes.</li>
-              <li class="text-jstify">Worked on real-time, database-driven web applications using Node.js, Python, PHP, JavaScript, and MySQL.</li>
-              <li class="text-jstify">Learned and applied Git version control best practices in a collaborative team environment.</li>
+              <li class="text-justify">Joined as Backend Intern after completing full-stack training, transitioning from freelance development.</li>
+              <li class="text-justify">Contributed to the backend of Terrogence Codex — feature development and bug fixes.</li>
+              <li class="text-justify">Worked on real-time, database-driven web applications using Node.js, Python, PHP, JavaScript, and MySQL.</li>
+              <li class="text-justify">Learned and applied Git version control best practices in a collaborative team environment.</li>
             </ul>
           </div>
         </div>
@@ -806,7 +811,7 @@
             <div>
               <div class="tl-title">Full Stack Development</div>
               <div class="tl-company"><img src="./images/ist-icon.png" style="height:35px; width:35px"/><span class="tl-company-name">Internshala</span></div>
-              <div class="tl-date"><i class="fas fa-calendar-alt" style="font-size:.7rem"></i>&nbsp; Jul 2023 - Jan 2024</div>
+              <div class="tl-date"><i class="fas fa-calendar-alt" style="font-size:.7rem"></i>&nbsp; <span>Jul 2023 - Jan 2024</span></div>
             </div>
             <div style="display:flex;align-items:flex-end;gap:.4rem">
               <span class="tl-badge badge-intern">Upskilling</span>
@@ -815,10 +820,10 @@
           </div>
           <div class="tl-body">
             <ul>
-              <li class="text-jstify">Covered frontend (React.js) and backend (Node.js, RESTful APIs, databases) to strengthen full-stack development fundamentals.</li>
-              <li class="text-jstify">Built and deployed real-world projects demonstrating end-to-end full-stack development skills.</li>
-              <li class="text-jstify">Gained hands-on experience in API integration, authentication, and responsive UI design.</li>
-              <li class="text-jstify">Focused on writing clean, efficient code and improving performance and scalability.</li>
+              <li class="text-justify">Covered frontend (React.js) and backend (Node.js, RESTful APIs, databases) to strengthen full-stack development fundamentals.</li>
+              <li class="text-justify">Built and deployed real-world projects demonstrating end-to-end full-stack development skills.</li>
+              <li class="text-justify">Gained hands-on experience in API integration, authentication, and responsive UI design.</li>
+              <li class="text-justify">Focused on writing clean, efficient code and improving performance and scalability.</li>
             </ul>
           </div>
         </div>
@@ -831,7 +836,7 @@
             <div>
               <div class="tl-title">Freelance Full-stack Developer</div>
               <div class="tl-company"><img src="./images/freelance-icon.png" style="height:50px; width:50px"/><span class="tl-company-name">Contract-based (Freelancer, LinkedIn, Referrals)</span></div>
-              <div class="tl-date"><i class="fas fa-calendar-alt" style="font-size:.7rem"></i>&nbsp; Feb 2019 - Jun 2023</div>
+              <div class="tl-date"><i class="fas fa-calendar-alt" style="font-size:.7rem"></i>&nbsp; <span>Feb 2019 - Jun 2023</span></div>
             </div>
             <div style="display:flex;align-items:flex-end;gap:.4rem">
               <span class="tl-badge badge-free">Freelance</span>
@@ -840,11 +845,11 @@
           </div>
           <div class="tl-body">
             <ul>
-              <li class="text-jstify">Worked on multiple small to mid-scale web applications through LinkedIn, personal contacts, and online platforms.</li>
-              <li class="text-jstify">Built and maintained backend systems and REST APIs using Node.js, Express.js, Python/Django, and Laravel.</li>
-              <li class="text-jstify">Designed and optimized MySQL databases, including schema design and query optimization.</li>
-              <li class="text-jstify">Integrated third-party APIs and handled data processing, validation, and authentication flows.</li>
-              <li class="text-jstify">Assisted in deployment and environment setup using AWS and Docker.</li>
+              <li class="text-justify">Worked on multiple small to mid-scale web applications through LinkedIn, personal contacts, and online platforms.</li>
+              <li class="text-justify">Built and maintained backend systems and REST APIs using Node.js, Express.js, Python/Django, and Laravel.</li>
+              <li class="text-justify">Designed and optimized MySQL databases, including schema design and query optimization.</li>
+              <li class="text-justify">Integrated third-party APIs and handled data processing, validation, and authentication flows.</li>
+              <li class="text-justify">Assisted in deployment and environment setup using AWS and Docker.</li>
             </ul>
           </div>
         </div>
@@ -860,10 +865,10 @@
   <div class="container">
     <div class="fade-up">
       <div class="section-label"><i class="fas fa-briefcase"></i> Problem Solving</div>
-      <h2 class="section-title">How &nbsp;&nbsp;I <span>&nbsp;Work</span></h2>
+      <h2 class="section-title">How &nbsp;&nbsp;I <span>&nbsp;&nbsp;Work</span></h2>
     </div>
     <div class="how-i-work">
-      <p class="section-subtitle">
+      <p class="text-justify">
         My approach focuses on understanding business problems at a deeper level and identifying the right solutions. I design scalable and efficient systems aligned with business goals. By collaborating with teams and following a structured roadmap, I ensure smooth execution and deliver solutions that create measurable impact and long-term value.
       </p>
     
@@ -923,7 +928,7 @@
   <div class="container">
     <div class="fade-up">
       <div class="section-label"><i class="fas fa-rocket"></i> Portfolio</div>
-      <h2 class="section-title">Featured <span>Projects</span></h2>
+      <h2 class="section-title">Featured &nbsp;&nbsp;<span>Projects</span></h2>
     </div>
     <div class="projects-grid">
 
@@ -959,7 +964,7 @@
         </div>
         <div class="project-label">Professional Project</div>
         <h3>Terrogence Codex</h3>
-        <p class="text-jstify">Large-scale intelligence and research platform built on PHP (CodeIgniter), JavaScript, MySQL, and GCP. Features scalable REST APIs, high-volume data handling, advanced search and filtering, metadata-driven records, and media/document management.</p>
+        <p class="text-justify">Large-scale intelligence and research platform built on PHP (CodeIgniter), JavaScript, MySQL, and GCP. Features scalable REST APIs, high-volume data handling, advanced search and filtering, metadata-driven records, and media/document management.</p>
         <div class="project-tech">
           <span>PHP</span><span>CodeIgniter</span><span>MySQL</span><span>GCP</span><span>JavaScript</span><span>REST APIs</span>
         </div>
@@ -1002,7 +1007,7 @@
         </div>
         <div class="project-label">Personal Project</div>
         <h3>E-commerce Platform</h3>
-        <p class="text-jstify">Full stack multi-vendor e-commerce web application. REST APIs for seller registration, product management, cart, orders, JWT authentication, and buyer workflows. Integrated Stripe demo payments. Deployed on Netlify and Firebase.</p>
+        <p class="text-justify">Full stack multi-vendor e-commerce web application. REST APIs for seller registration, product management, cart, orders, JWT authentication, and buyer workflows. Integrated Stripe demo payments. Deployed on Netlify and Firebase.</p>
         <div class="project-tech">
           <span>Node.js</span><span>Express.js</span><span>React.js</span><span>MongoDB</span><span>JWT</span><span>Stripe</span>
         </div>
@@ -1044,7 +1049,7 @@
         </div>
         <div class="project-label">Personal Project</div>
         <h3>Social Media Platform</h3>
-        <p class="text-jstify">Full stack Twitter/X-inspired social platform. REST APIs for authentication, post creation, feed generation, user profiles, likes, comments, and follow/unfollow. Optimized MongoDB schemas for high-read feed operations.</p>
+        <p class="text-justify">Full stack Twitter/X-inspired social platform. REST APIs for authentication, post creation, feed generation, user profiles, likes, comments, and follow/unfollow. Optimized MongoDB schemas for high-read feed operations.</p>
         <div class="project-tech">
           <span>Node.js</span><span>Express.js</span><span>React.js</span><span>MongoDB</span><span>JWT</span>
         </div>
@@ -1062,12 +1067,30 @@
 <section id="certificates">
   <div class="container">
     <div class="fade-up">
-      <div class="section-label"><i class="fas fa-rocket"></i> Certificates</div>
-      <h2 class="section-title">Full Stack Development <span>Upskilling Course</span></h2>
+      <div class="section-label"><i class="fas fa-rocket"></i> Certificates & Awards</div>
     </div>
     <div class="certificates-grid">
-      <img src="./images/ist-certificate.jpg" class="responsive-img"/>
-    </div>    
+      <div class="row">
+        
+        <!-- Left Column (2 images) -->
+        <div class="col-lg-6">
+          <div class="row">
+            <div class="col-12">
+              <img src="./images/ist-certificate.jpg" class="responsive-img"/>
+            </div>
+            <div class="col-12">
+              <img src="./images/first-year-certificate.jpg" class="responsive-img"/>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Right Column (1 image full height) -->
+        <div class="col-lg-6">
+          <img src="./images/ceo-msg.jpg" class="responsive-img full-height"/>
+        </div>
+    
+      </div>
+    </div> 
   </div>
 </section>
 
@@ -1076,7 +1099,7 @@
   <div class="container" style="margin-top:5rem">
     <div class="fade-up">
       <div class="section-label"><i class="fas fa-rocket"></i> Career Goals</div>
-      <h2 class="section-title">What&nbsp;&nbsp; I&nbsp;&nbsp; Value <span>&nbsp;&nbsp;at Work</span></h2>
+      <h2 class="section-title">What&nbsp;&nbsp; I&nbsp;&nbsp; Value <span>&nbsp;&nbsp;at &nbsp;&nbsp;Work</span></h2>
     </div>
     <div class="what-i-want">
       <div class="row">
@@ -1084,7 +1107,7 @@
           <div class="want-card">
             <img src="./images/great-culture.jpg" alt="Culture">
             <h4><strong>Great Culture</strong></h4>
-            <p class="text-jstify">
+            <p class="text-justify">
               I want to work in a positive and collaborative environment where ideas are respected, 
               learning is encouraged, and teamwork drives success. A strong culture helps build 
               better products and better engineers.
@@ -1096,7 +1119,7 @@
           <div class="want-card">
             <img src="./images/opportunity-icon.jpg" alt="Growth">
             <h4><strong>Growth & Opportunities</strong></h4>
-            <p class="text-jstify">
+            <p class="text-justify">
               I am looking for opportunities where I can continuously learn, take on new challenges, 
               and grow as a Full Stack / Backend Developer. I believe growth comes from solving 
               real-world problems and pushing limits.
@@ -1108,7 +1131,7 @@
           <div class="want-card">
             <img src="./images/vision-icon.jpg" alt="Vision">
             <h4><strong>Strong Vision</strong></h4>
-            <p class="text-jstify">
+            <p class="text-justify">
               I strive to design and build systems that are scalable, reliable, and impactful.
               I believe in continuous learning, ownership, and delivering high-quality solutions.
               My vision is to create technology that solves real problems and reaches millions.
@@ -1125,7 +1148,7 @@
   <div class="container">
     <div class="fade-up">
       <div class="section-label"><i class="fas fa-graduation-cap"></i> Academic</div>
-      <h2 class="section-title">My <span>Education</span></h2>
+      <h2 class="section-title">My &nbsp;&nbsp;<span>Education</span></h2>
     </div>
 
     <div class="row">
@@ -1194,7 +1217,7 @@
   <div class="container">
     <div class="fade-up">
       <div class="section-label"><i class="fas fa-heart"></i> Personal</div>
-      <h2 class="section-title">Hobbies &amp; <span>Languages</span></h2>
+      <h2 class="section-title">Hobbies &nbsp;&nbsp;&amp; <span>&nbsp;&nbsp;Languages</span></h2>
     </div>
     <div class="hl-grid">
 
@@ -1269,7 +1292,7 @@
   <div class="container">
     <div class="fade-up">
       <div class="section-label"><i class="fas fa-paper-plane"></i> Get In Touch</div>
-      <h2 class="section-title">Let's <span>Connect</span></h2>
+      <h2 class="section-title">Let's&nbsp;&nbsp; <span>Connect</span></h2>
     </div>
     <div class="contact-grid">
       <div class="fade-up">
@@ -1312,30 +1335,40 @@
 <script>
   // TYPING ANIMATION
   const roles = [
-    "Full Stack Developer",
-    "Backend Engineer",
-    "Node.js Specialist",
-    "Python Developer",
-    "API Architect"
-  ];
-  let ri = 0, ci = 0, deleting = false;
-  const el = document.getElementById('typing-text');
+  "Full Stack Developer (Backend-Focused)",
+  "Scalable Backend Engineer",
+  "Node.js & API Specialist",
+  "Python Developer (Django)",
+  "Database Optimization Expert (MySQL)",
+  "Cloud Engineer (GCP)",
+  "API Architect & System Designer"
+];
+let ri = 0, ci = 0, deleting = false;
+const el = document.getElementById('typing-text');
 
-  function type() {
-    const cur = roles[ri];
-    if (deleting) {
-      el.innerHTML = cur.substring(0, ci - 1) + '<span class="cursor"></span>';
-      ci--;
-      if (ci === 0) { deleting = false; ri = (ri + 1) % roles.length; setTimeout(type, 400); return; }
-      setTimeout(type, 55);
-    } else {
-      el.innerHTML = cur.substring(0, ci + 1) + '<span class="cursor"></span>';
-      ci++;
-      if (ci === cur.length) { setTimeout(() => { deleting = true; type(); }, 1800); return; }
-      setTimeout(type, 90);
+function type() {
+  const cur = roles[ri];
+  if (deleting) {
+    el.innerHTML = cur.substring(0, ci - 1) + '<span class="cursor"></span>';
+    ci--;
+    if (ci === 0) { 
+      deleting = false; 
+      ri = (ri + 1) % roles.length; 
+      setTimeout(type, 240); // 400 → 240
+      return; 
     }
+    setTimeout(type, 33); // 55 → 33
+  } else {
+    el.innerHTML = cur.substring(0, ci + 1) + '<span class="cursor"></span>';
+    ci++;
+    if (ci === cur.length) { 
+      setTimeout(() => { deleting = true; type(); }, 1080); // 1800 → 1080
+      return; 
+    }
+    setTimeout(type, 54); // 90 → 54
   }
-  setTimeout(type, 600);
+}
+setTimeout(type, 360); // 600 → 360
 
   // MOBILE MENU
   function toggleMenu() {
