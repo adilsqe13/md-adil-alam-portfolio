@@ -99,7 +99,11 @@
   .hero-orb.o2{bottom:-80px;left:-100px;width:400px;height:400px;background:rgba(13,148,136,.07);}
   .hero-orb.o3{top:30%;left:40%;width:300px;height:300px;background:rgba(34,197,94,.06);}
   .hero-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:5rem;align-items:center;width:100%;position:relative;z-index:1;}
-  .hero-badge{display:inline-flex;align-items:center;gap:.6rem;background:var(--card);border:1.5px solid var(--border);color:var(--text);padding:.45rem 1.1rem;border-radius:28px;font-size:.8rem;font-weight:700;margin-bottom:0.2rem;box-shadow:var(--shadow-sm);letter-spacing:.3px;margin-top:0.3rem;margin-left:3rem}
+  .hero-badge {position: relative;display: inline-flex;align-items: center;gap: .6rem;background: var(--card);color: var(--text);padding: .45rem 1.1rem;border-radius: 28px;font-size: .8rem;font-weight: 700;margin-bottom: 0.2rem;box-shadow: var(--shadow-sm);letter-spacing: .3px;margin-top: 0.3rem;margin-left: 3rem;overflow: hidden;z-index: 1;}
+  /* Animated border layer */
+  .hero-badge::before {content: "";position: absolute;inset: 0;border-radius: 28px;padding: 2px;background: linear-gradient(120deg,transparent,transparent,#22c55e,transparent,transparent);background-size: 300% 300%;animation: train-border 3s linear infinite;z-index: -1;-webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);-webkit-mask-composite: xor;mask-composite: exclude;}
+  
+  @keyframes train-border {0%{background-position: 0% 50%;}100%{background-position: 300% 50%;}}.hero-badge::before {filter: blur(1px);}
   .hero-badge .dot{width:8px;height:8px;border-radius:50%;background:var(--accent3);box-shadow:0 0 8px rgba(34,197,94,.5);animation:pulse-dot 2s ease-in-out infinite;}
   @keyframes pulse-dot{0%,100%{box-shadow:0 0 8px rgba(34,197,94,.5),0 0 0 0 rgba(34,197,94,.3);}50%{box-shadow:0 0 8px rgba(34,197,94,.5),0 0 0 6px rgba(34,197,94,0);}}
   h1.hero-name{font-size:clamp(2.6rem,5vw,4.2rem);font-weight:900;line-height:1.05;margin-bottom:.6rem;letter-spacing:-2px;color:var(--text);}
@@ -442,6 +446,7 @@
     height: 100%;
     object-fit: cover;
     margin-top: 20px;
+    padding: 0.3rem 0.3rem;
   }
   
   /* Right side image full height */
@@ -636,9 +641,18 @@
           <div class="hero-avatar"><img src="./images/adil_profile_img.jpeg"/></div>
           
           <div class="hero-stats">
-            <div class="hero-stat"><div class="num">6<span>+</span></div><div class="lbl">Years Exp</div></div>
-            <div class="hero-stat"><div class="num">10<span>+</span></div><div class="lbl">Projects</div></div>
-            <div class="hero-stat"><div class="num">7<span>+</span></div><div class="lbl">Tech</div></div>
+            <div class="hero-stat">
+              <div class="num" data-target="6">0<span>+</span></div>
+              <div class="lbl">Years Exp</div>
+            </div>
+            <div class="hero-stat">
+              <div class="num" data-target="10">0<span>+</span></div>
+              <div class="lbl">Projects</div>
+            </div>
+            <div class="hero-stat">
+              <div class="num" data-target="7">0<span>+</span></div>
+              <div class="lbl">Tech</div>
+            </div>
           </div>
         </div>
       </div>
@@ -1451,6 +1465,55 @@ setTimeout(type, 360); // 600 → 360
     initSlider('ecom', 5);
     initSlider('social', 5);
   });
+
+  const counters = document.querySelectorAll('.num');
+
+counters.forEach(counter => {
+  const target = +counter.getAttribute('data-target');
+  let count = 0;
+
+  const updateCount = () => {
+    const increment = Math.ceil(target / 50); // speed control
+
+    if (count < target) {
+      count += increment;
+      if (count > target) count = target;
+
+      counter.childNodes[0].nodeValue = count; // keeps "+" safe
+      setTimeout(updateCount, 30);
+    }
+  };
+
+  updateCount();
+});
+
+let started = false;
+
+window.addEventListener('scroll', () => {
+  const section = document.querySelector('.hero-stats');
+  const sectionTop = section.offsetTop - window.innerHeight + 100;
+
+  if (!started && window.scrollY > sectionTop) {
+    started = true;
+
+    counters.forEach(counter => {
+      const target = +counter.getAttribute('data-target');
+      let count = 0;
+
+      const updateCount = () => {
+        const increment = Math.ceil(target / 50);
+        if (count < target) {
+          count += increment;
+          if (count > target) count = target;
+          counter.childNodes[0].nodeValue = count;
+          setTimeout(updateCount, 30);
+        }
+      };
+
+      updateCount();
+    });
+  }
+});
 </script>
 </body>
 </html>
