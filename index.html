@@ -170,7 +170,7 @@
   .skill-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent3),var(--teal));transform:scaleX(0);transform-origin:left;transition:transform var(--transition);}
   .skill-card:hover::before{transform:scaleX(1);}
   .skill-card:hover{border-color:var(--border-hover);transform:translateY(-5px);box-shadow:var(--shadow-xl);}
-  .skill-card .skill-icon{font-size:2rem;margin-bottom:.8rem;filter:drop-shadow(0 2px 4px rgba(0,0,0,0.08));}
+  .skill-card .skill-icon{font-size:2rem;margin-bottom:.8rem;}
   .skill-card h4{font-size:1.02rem;font-weight:800;margin-bottom:.45rem;color:var(--text2);letter-spacing:-.2px;}
   .skill-card p{font-size:.83rem;color:var(--muted);line-height:1.65;font-weight:400;}
   .skill-bar{margin-top:.9rem;height:6px;background:var(--bg3);border-radius:3px;overflow:hidden;box-shadow:inset 0 1px 2px rgba(0,0,0,0.04);}
@@ -682,7 +682,7 @@
       <div class="about-cards fade-up">
         <div class="about-card">
           <h3 style="margin-bottom: 0.9rem">Backend Engineering</h3>
-          <div class="adapt-screen"><img src="./images/full-stack.png"/></div>
+          <div class="adapt-screen"><img src="./images/backend.png"/></div>
           <p class="text-justify">I design and develop scalable backend systems using well-structured REST APIs.
             I focus on building clean, efficient, and maintainable server-side architectures.
             I specialize in database design with strong emphasis on query optimization.
@@ -701,7 +701,7 @@
   <div class="container">
     <div class="fade-up">
       <div class="section-label"><i class="fas fa-tools"></i> Technical Skills</div>
-      <h2 class="section-title">My <span> Stacks</span></h2>
+      <h2 class="section-title">My <span> Skills</span></h2>
     </div>
     <div class="skills-grid">
       <div class="skill-card fade-up">
@@ -712,11 +712,23 @@
         <div class="skill-tags"><span class="skill-tag">Django</span><span class="skill-tag">DRF</span><span class="skill-tag">ORM</span></div>
       </div>
       <div class="skill-card fade-up">
-        <div class="skill-icon"><img src="./images/mysql-icon.png"></div>
-        <h4>MySQL</h4>
-        <p class="text-justify">Strong experience with MySQL for database design and query optimization.</p>
-        <div class="skill-bar"><div class="skill-bar-fill" data-width="85" style="width:0"></div></div>
-        <div class="skill-tags"><span class="skill-tag">Schema Design</span><span class="skill-tag">Indexing</span><span class="skill-tag">Optimization</span></div>
+        <div class="skill-icon">
+          <img src="./images/django-icon.png" alt="Django Icon">
+        </div>
+        <h4>Django</h4>
+        <p class="text-justify">
+          Built scalable REST APIs using Django with ORM-based database operations.
+        </p>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" data-width="75" style="width:0"></div>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">Django Rest API</span>
+          <span class="skill-tag">DRF</span>
+          <span class="skill-tag">ORM</span>
+          <span class="skill-tag">JWT</span>
+          <span class="skill-tag">Authentication</span>
+        </div>
       </div>
       <div class="skill-card fade-up">
         <div class="skill-icon"><img src="./images/nodejs-icon.png"></div>
@@ -724,6 +736,31 @@
         <p class="text-justify">Developed high-performance backend systems using Node.js with optimized APIs.</p>
         <div class="skill-bar"><div class="skill-bar-fill" data-width="90" style="width:0"></div></div>
         <div class="skill-tags"><span class="skill-tag">Express.js</span><span class="skill-tag">RESTful APIs</span><span class="skill-tag">Middleware</span><span class="skill-tag">OOPS</span><span class="skill-tag">JWT</span></div>
+      </div>
+      <div class="skill-card fade-up">
+        <div class="skill-icon"><img src="./images/mysql-icon.png"></div>
+        <h4>MySQL</h4>
+        <p class="text-justify">Strong experience with MySQL for database design and query optimization.</p>
+        <div class="skill-bar"><div class="skill-bar-fill" data-width="85" style="width:0"></div></div>
+        <div class="skill-tags"><span class="skill-tag">Schema Design</span><span class="skill-tag">Indexing</span><span class="skill-tag">Query optimization</span></div>
+      </div>
+      <div class="skill-card fade-up">
+        <div class="skill-icon">
+          <img src="./images/postgresql-icon.png" alt="PostgreSQL Icon">
+        </div>
+        <h4>PostgreSQL</h4>
+        <p class="text-justify">
+          Designed databases in PostgreSQL with efficient queries and schema design for scalable applications.
+        </p>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" data-width="90" style="width:0"></div>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">SQL</span>
+          <span class="skill-tag">Joins</span>
+          <span class="skill-tag">Indexing</span>
+          <span class="skill-tag">Schema Design</span>
+        </div>
       </div>
       <div class="skill-card fade-up">
         <div class="skill-icon"><img src="./images/gcp-icon.png"></div>
